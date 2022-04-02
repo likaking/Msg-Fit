@@ -4,7 +4,8 @@
   "description": "An app for creating an sending custom messages to people.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
   },
   "author": "Like A king company",
   "license": "ISC",

@@ -444,7 +444,7 @@ router.get("/demo", (req,res) => {
   })
 
 console.log(numberOfMailsSent)
-app.listen(PORT, (req,res) =>{
+app.listen(process.env.PORT, (req,res) =>{
         console.log(`This website is running on port ${PORT}. Message Celeb - by LikeAKing Company`)
  
 })
