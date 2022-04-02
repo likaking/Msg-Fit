@@ -1,0 +1,337 @@
+ <!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>Auto Grouping Bot</title> 
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="agbStyles.css">
+<link rel="stylesheet" href="agbResponsive.css">
+<body>
+<div id = "display_Allgrps1" style="width:50%;height:100px; border:1px solid grey;background-color:red;display:none"></div>
+<div id = "mobile_h"><h2>Auto Grouping Bot </h2></div>
+<div id = "mobile_menu">about AGB | contact admin | <span class = "create_grpss"  href="#" onclick="Creategroups();return false;">Admin dashboard</span></div>
+<div>
+<table  class = "Htable">
+  <tr>
+   <td style="width:50%">
+           <h2 id="sHead"> </h2>
+          
+   </td>
+    <td style="width:1%"><div>
+	</td>
+    <td style="width:1%">
+	</td>
+    <td style="width:39%;text-align:right"><div id="buttons" style="text-align:right">
+	<div style="margin-right: 5px;margin-bottom: 5px;"> Sign up &nbsp;&nbsp; <span class = "create_grpss"  href="#" onclick="Creategroups();return false;">Admin </span>&nbsp;&nbsp;  about AGB  </div>
+    </td>
+  </tr>
+   
+  </table>
+
+
+<br class = "m_brk" >
+<br class = "m_brk">
+</div>
+
+<div style="margin-top: 15px;"><h2 id="sHead"> </h2></div>
+<div id="poweredBy"><small> Powerd by Auto Grouping Bot </small> </div>
+<h2 id="_Event" ></h2>
+<small><div id="COUNT_down"></div></small>
+
+<br>
+<br>
+<div id="gen_members"></div>
+
+<br>
+<div id = "dash_brdnn">
+
+  <center>
+    <form>
+    
+   <b><div id="urGRP">Your group </b></div>
+	<br>
+   <input type="text" class = "form" placeholder = "Name" id = "name">
+   <input type="text" class = "form" placeholder = "email" id = "contact">
+   <input type="text" class = "form" placeholder = "phone number" id = "Phone_contact"  style = "display:none">
+   <input type="text" class = "form" value = "" id = "other_contact"    style = "display:none">
+   <button id = "pick_BTN" onclick = "pick_A_grp()">Pick a group</button>
+  </form>
+   <br>
+   <br>
+    <div id ="ug" >100% Unbiased grouping</div>
+
+   </center> 
+   </div>
+	<div id = "av_g">
+	<center><b><div  id="av_grps"></div></b></center>
+  <br>
+	<center><div  id="list_grps">
+	</div></center>
+    </div>
+ <div style="clear: both"></div>
+	
+	<div style="clear: both"></div>
+ 
+  <br>
+
+ <center><div id = "comeWith_BringTHIS">Processing of documents will start on Monday</div></center>
+ <div style="clear: both"></div>
+	
+ <div style="clear: both"></div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <div style="text-align: center;border: 1px solid blue;">
+  <h3 >Meet Group Members</h3>
+</div>
+<div id = "EveryGroup"   ></div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <div style="clear: both"></div>
+	
+ <div style="clear: both"></div>
+ 
+  <center><div id = "Event_ORG"><b> Grouping event Organiser</b>
+  <center><div id = "About_THIScomp"></div></center>
+  </div></center>
+    
+	<div style="clear: both"></div>
+	
+	<div style="clear: both"></div>
+	<br><br><br>
+	
+
+ 
+ 
+ 
+   <footer >
+by Like A King Company
+<small><span style="float: right;">	&#169;<span id = "disYear"></span> Like A King Company. All rights reserved</span></small>
+<br>
+<i>reality is a lair</i>
+</footer>
+
+
+ <div id="success1" style="background-color:yellow">
+<div style="background-color:red;height:22px;width:100%"><span>
+<button style="float:right"  onclick = "close_it()">close</button><button style="float:right;" id = "hide"  onclick = "shownHide()">hide</button><button style="float:right;" id = "show"  onclick = "SHOW()">show</button>
+</span>
+</div>
+<div style="display:none" id = "small_admin" >
+<div id="">Admin Dashboard</div>
+
+</div>
+<div id = "Admin_control">
+<div>
+<h2 id=""  style="text-align: left;margin-left:12px;margin-top: 5px;border: 0px solid green; width: 49%;float: left;">Admin Dashboard</h2>
+<h4  style="text-align: right;margin-right:10px;margin-top: 5px;border: 0px solid green; width: 49%;float: left;" id = "AdminGrpAct"></h4>
+</div>
+<div style="clear: both"></div>
+<div style="clear: both"></div>
+<center>  <button>End grouping</button> <button>Go live</button> </center>
+<center><div></div></center>
+<center><div> </div></center> <center>
+  <div >
+    <br>
+ <b> Groups Stats </b>
+  <br>
+  <br>
+  </div></center> 
+
+
+<div  class = "Admin_set">
+   <center><div id = "adminGrpEvent"><b></b></div></center>
+   <center> <div ><span  id="creATION_date">Created on 15/<span id = "dMonthGB"></span>/<span id = "dYearGB"></span></span> | <span  id="gen_membersAdmin"></span></div></center> 
+   <center> <div></div></center> 
+   <center> <div id="total_Admin"> Total members : <span id = "totalMemAdmin"></span> </div></center> 
+   <br>
+    <div  style = "height:300px;overflow:auto" id = "totalMemberDB">
+    </div>
+</div>
+<div  class = "Admin_set showBorder"  style = "height:400px">
+  <center>
+   <div >
+    
+  <b>Live updates &nbsp <button id = "clear_Lfeeds"  style = "float:right" onclick = "clear_allLvfeeds()">delete updates </button></b>
+   <div id = "msg_counter"></div>
+   </div></center> 
+   <center> <div id="gen_membersAdminxx"  style = "text-align:left;overflow:auto;height:300px"></div></center> 
+</div>
+<div style="clear: both"></div>
+	<div style="clear: both"></div>
+	 <br>
+ <br> 
+ <br>
+ 
+   <center><div><b>Set up & manage groups </b></div></center>
+    <br>
+<div class = "Admin_set" >
+   <center> <div  >
+   
+   <input type="text" class = "admim_form" placeholder = "Group name" id = "grp_name">
+   <br>
+   <br>
+   <textarea id="admin_txt_B"   placeholder = "Whats this group about?"></textarea>
+   <br>
+   <button id="admin_create_Grp" onclick = "Create_URgroup()">Create group</button>
+   <br>
+   <br>
+   <br>
+   </div></center> 
+   </div>
+	<div class = "Admin_set">
+	<center>
+	<div>
+	<span><input type = "text" class = "date" placeholder = "Starting date" id = "stating_DT" > <span>
+	<br>
+	<br>
+	<input type="text" class = "admim_form" placeholder = "Your company name" id = "grp_companynAME">
+   <br>
+   <br>
+   <input type="text" class = "admim_form" placeholder = "The event" id = "grp_event">
+   <br>
+   <br>
+   <input type="text" class = "admim_form" placeholder = "eg. use team or club, instead of group" id = "grp_Avial_Changename">
+   <br>
+   <br>
+   <textarea id="admin_txt_comp"   placeholder = "Describe your company"></textarea>
+   <br>
+   <br>
+	</div>
+	</center>
+	</div>
+ <br>
+ <br> 
+ <br>
+<br>
+<div style="clear: both"></div>
+	<div style="clear: both"></div>
+	 <br>
+ <br> 
+ <br>
+   <center><div><b>Edit & Manage Groups </b></div></center>
+    <br>
+
+<div  class = "Admin_set">
+  <center>
+   <div >
+  <b> Rename groups </b>
+   
+   <br>
+   <br>
+   </div></center> 
+   <center> <div id="rename_grps">
+   <div id = "edit_ME"  > 
+   <select type = "text" class = "rename_dat"   id = "options"   onclick= "Edit_dAboutGRPS()">
+  </select> <input type = "text" class = "rename_dat"   id = "rename_me" placeholder = ""  ><span><div  style="padding:4px"> <button class = "edit_btn"  id = "rename_me_BTN"  onclick = "rename_MYgrp()">rename group</button></span> <span > <button class = "edit_btn" id = "delete_me_BTN"  onclick = "toggleoo_THIS()" >delete group</button>  </span></div> </div>
+   <div  id = "doYOU_delete"   class = "wanto_delete"    style = "padding:5px;display:none">Do you want to procced with this action? <span><button id = "yes_delete"    class = "delete_it"  onclick = "DEL_AboutgrpF()">Yes</button> <button  id = "No_delete"   class = "dont_deleteO"  onclick="_OrNo(doYOU_delete)">No</button></span></div>
+  <div  id = "dis_hidden" style = "">
+   <textarea id="about_groups"   class = "about_d_Grps" style = "height:150px;width:80%;border:0px solid grey"></textarea>
+  
+   <button  id = "Repgrp_info"  onclick = "edit_grpCont()">Update group info</button>
+   
+   </div>
+   
+   </div></center> 
+    
+</div>
+  
+	<div class = "Admin_set">
+	<center>
+    <br><br>
+	<div  style = " border:0px solid grey;text-align:left;width:80%">
+	<span><input type = "checkbox"  id = "use_NAMEonly"  onclick = "UseName_Only()">use only the name field </span> <span><input type = "checkbox"  id = "public_see_dGRP"> Hide groups from the public </span>
+   <br>
+   <span ><input type = "checkbox"  id = "use_phone"  onclick = "use_PhoneContact()">use phone field </span><span ><input type = "checkbox"  id = "use_Email"   onclick = "hide_emailFields()">hide email field </span><span ><input type = "checkbox" id = "otherflds" onclick = "use_otherFields()">use other fields </span>
+   <br>
+   <div > <input  placeholder = "Name the field"   type = "text" style = "float:center;width:50%;display:none" id = "Name_otherFIELD" ></div>
+   </div>
+   <br>
+   <center><div>Customize the sucess message</div></center>
+   <textarea id="admin_txt_B_Success"   placeholder = "Customize the sucess message" ></textarea>
+   <div><small>If you mistakinly delete the original message, click <button  onclick = "reset_custMSG()">me</button> <br>    
+	 ***Important!: Don't delete the  "(< >)" tags & words inside the tags.
+   </small></div>
+   <br>
+   <textarea id="admin_txt_BVIP"   placeholder = "Write an important message. eg, come with this, do this..."></textarea>
+   <button id="save_msg"  onclick = "save_grpInfo()">Save Info</button>
+   <br>
+   <br>
+	</center>
+	</div>
+<br>
+<br>
+<br>
+<br>
+ 
+<div style="clear: both"></div>
+	
+	<div style="clear: both"></div>
+
+<br>
+<br>
+<br>
+<br>
+<div  id = "About_EVERYgroup" class = ""  style="margin-bottom: 10px;"><b><center>Group Members & Groups</center></b></div>
+<div  id = "adminGrpsAll" class = ""   style="border:1px solid grey"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+  </div>
+  <div style="clear: both"></div>
+	
+	<div style="clear: both"></div>
+  <button id="shw_Admin"   style="display:none">Show Admin</button>
+
+  <div style="clear: both"></div>
+	
+	<div style="clear: both"></div>
+ <div id="success" style="display:none">
+ <br>
+ <div id="success_INNER" style="word-break: break-word">
+ <div style="word-break: break-word">
+ <h2 id="sucess_HEADER"></h2>
+ </div>
+ <br>
+ <center><div id="sucess_BODY" style="text-align:left"> </div></center>
+ 
+ <br>
+ </div>
+ <center><div>
+ <button class ="sucessBTNS" id="close" onclick = "close_sucess()">Close</button>
+ 
+ <button class ="sucessBTNS" id="print">Print</button>
+ 
+ </div>
+ 
+<br>
+<br>
+<br>
+<br>
+</body>
+
+<script type='text/javascript' src = "agb.js" ></script>
+<script>
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  let year  = new Date().getFullYear()
+  let Currmonth = new Date();
+  let disMonth = month[Currmonth.getMonth()]
+   
+  document.getElementById("disYear").innerHTML = year;
+  document.getElementById("dMonthGB").innerHTML = disMonth;
+  document.getElementById("dYearGB").innerHTML = year;
+ 
+</script>
+
+</html>

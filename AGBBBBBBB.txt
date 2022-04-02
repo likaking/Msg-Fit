@@ -1,0 +1,1497 @@
+let counter = 0;
+var C_grp = document.getElementsByClassName("Cre_grps");
+let shuff = [];
+let third = [];
+
+var arr_0 = ["Tade Sagbe","Wike Sagbe", "Biden Sagbe"];
+var arr_1 = ["kemi Sagbe","Wike Sagbe"];
+var arr_2 = ["stella Sagbe","Wike Sagbe"];
+var arr_3 = ["baby Sagbe","Wike Sagbe"];
+var arr_4 = ["grace Sagbe","Wike Sagbe"];
+var arr_5 = ["Chisome Sagbe","Wike Sagbe"];
+var arr_6 = ["chinasa Sagbe","Wike Sagbe"];
+var arr_7 = ["Buhari Sagbe","Wike Sagbe"];
+var arr_8 = ["boss Sagbe","Wike Sagbe"];
+var arr_9 = ["love Sagbe","Wike Sagbe"];
+var arr_10 = ["Naija Sagbe","Wike Sagbe"];
+var arr_11 = ["swt Sagbe","Wike Sagbe"];
+var arr_12 = ["pulse Sagbe","Wike Sagbe"];
+var arr_13 = ["football Sagbe","Wike Sagbe"];
+var arr_14 = ["money Sagbe","Wike Sagbe"];
+var arr_15 = ["Boma Sagbe","Wike Sagbe"];
+var arr_16 = ["web Sagbe","Wike Sagbe"];
+var arr_17 = ["net Sagbe","Wike Sagbe"];
+var arr_18 = ["click Sagbe","Wike Sagbe"];
+var arr_19 = ["CNN Sagbe","Wike Sagbe"];
+var arr_20 = ["CBN Sagbe","Wike Sagbe"];
+var arr_21 = ["DOLLAR Sagbe","Wike Sagbe"];
+var arr_22 = ["POUNDS Sagbe","Wike Sagbe"];
+var arr_23 = ["EURO Sagbe","Wike Sagbe"];
+var arr_24 = ["USA Sagbe","Wike Sagbe"];
+var arr_25 = ["Barcelonia Sagbe","Wike Sagbe"];
+var arr_26 = ["MADRID Sagbe","Wike Sagbe"];
+var arr_27 = ["APPLE Sagbe","Wike Sagbe"];
+var arr_28 = ["ZOOM Sagbe","Wike Sagbe"];
+var arr_29 = ["TELSA Sagbe","Wike Sagbe"];
+var arr_30 = ["Facebook Sagbe"];
+
+//USE Dangote Group
+
+let groupsSEE  = [];
+
+let groups  = [];
+
+//let groupsADMINSAMP  = ["Gold Group", "Diamond Group", "Platinum Group", "Kings Group", "Queens Group", "Nelson Mandela Group", "M. L. King Group", "Elon Musk Group","Gold Group2", "Diamond Group2", "Platinum Group2", "Kings Group2", "Queens Group2", "Nelson Mandela Group2", "M. L. King Group2", "Elon Musk Group2", "Gold Group3", "Diamond Group3", "Platinum Group3", "Kings Group3", "Queens Group3", "Nelson Mandela Group3", "M. L. King Group3", "Elon Musk Group3","Gold Group4", "Diamond Group4", "Platinum Group4", "Kings Group4", "Queens Group4", "Nelson Mandela Group"];
+
+
+let groupsADMIN  = ["Gold Group", "Diamond Group", "Platinum Group", "Kings Group", "Queens Group", "Nelson Mandela Group", "M. L. King Group", "Elon Musk Group","Gold Group2", "Diamond Group2", "Platinum Group2", "Kings Group2", "Queens Group2", "Nelson Mandela Group2", "M. L. King Group2", "Elon Musk Group2", "Gold Group3", "Diamond Group3", "Platinum Group3", "Kings Group3", "Queens Group3", "Nelson Mandela Group3", "M. L. King Group3", "Elon Musk Group3","Gold Group4", "Diamond Group4", "Platinum Group4", "Kings Group4", "Queens Group4", "Nelson Mandela Group"];
+
+
+
+let describe_groups = ["For Gold lovers","For Diamond lovers","For Platinum Group lovers"];
+
+let groupsA  = []
+
+let groupsB  = [];
+
+all_members = [];
+
+groupsSEE = [...groupsADMIN];
+
+groupsA = [...groupsADMIN];
+
+groupsB = [...groupsADMIN];
+
+//groups = groupsADMIN;
+
+
+groups.push(...groupsADMIN);
+	onload = ()=>{console.log(groupsSEE)};
+	
+	
+all_members_Logs = [];
+
+
+//Find the total members in all the groups
+
+let totalMemberAGB = arr_0.length + arr_1.length + arr_2.length + arr_3.length + arr_4.length + arr_5.length +
+arr_6.length + arr_7.length + arr_8.length + arr_9.length + arr_10.length + arr_11.length + arr_12.length +
+arr_13.length + arr_14.length + arr_15.length + arr_16.length + arr_17.length + arr_18.length + arr_19.length +
+arr_20.length + arr_21.length + arr_22.length + arr_23.length + arr_24.length + arr_25.length + arr_26.length +
+arr_28.length + arr_29.length;
+
+document.getElementById("totalMemAdmin").innerHTML = totalMemberAGB
+
+var u_re_grped = document.getElementById("success");
+
+var UR_grp = document.getElementById("urGRP");
+
+var MBR_name = document.getElementById("name");
+
+var MBR_contact = document.getElementById("contact");
+
+var av_GRPS = document.getElementById("av_grps").innerHTML = "Avialable groups";
+
+//var Title_Event = document.getElementById("sHead").innerHTML = ;
+
+var total_Members = document.getElementById("gen_members").innerHTML = totalMemberAGB + " people are already part of the " +groups.length +" avialable groups"
+
+var total_MembersAdmin = document.getElementById("gen_membersAdmin").innerHTML = groups.length +" Avialable groups"
+
+let change_AVAILname = document.getElementById (grp_Avial_Changename);
+
+var success_MSG_S = "Dear ";
+
+var success_MSG = ", you are officially wellcomed to "+ UR_grp.innerHTML + "."  ;
+
+//Pick A Group
+
+var inpi = document.getElementById("name");
+
+let rename_field = document.getElementById("rename_me");
+
+let select_OPTIONS = document.getElementById("options");
+
+
+
+//comeWith_BringTHIS
+//console.log(options.value.length-1)
+
+//Auto fill groupdescription
+
+
+
+
+//console.log(add_ABOUTgrps("Gold Group"))
+
+//about_groups
+
+
+
+const txtB = document.getElementById("textarea");
+
+const txtB2 = document.getElementById("kkk");
+
+const sel_box = document.getElementById("options");
+
+const EDT_GRPinfo = document.getElementById("about_groups");
+
+
+function rename_AllOPTIONSbx(){
+
+let xi = document.getElementById("options").selectedIndex;
+
+let yi = document.getElementById("options").options;
+
+let findINDEX = yi[xi].index;
+
+console.log(findINDEX + "sup")
+
+/*
+nuOPT.text = rename_field.value
+sel_box.add(nuOPT, sel_box[findINDEX]);
+sel_box.remove(sel_box[findINDEX]);
+*/
+
+sel_box[findINDEX].innerHTML = rename_field.value;
+
+
+//console.log(sel_box[0].innerHTML);
+//doEdit();
+}
+
+
+function Edit_dAboutGRPS() {
+doEdit()
+
+//var text = document.createTextNode(txtB.value);
+//document.getElementById("display").appendChild(text );
+ let reply = "";
+  for (let i = 0; i < groupsADMIN.length; i++) {
+    if (sel_box.value === groupsADMIN[i]) {
+  
+ 
+  EDT_GRPinfo.value = describe_groups[i];
+    //console.log(reply);
+  }
+  }
+}
+Edit_dAboutGRPS()
+
+
+
+function fill_RenameFields(){
+ sel_box.value.trim();
+
+
+rename_field.value = sel_box.value ;
+}
+
+function doEdit(){
+
+
+rename_field.value = sel_box.value ;
+
+
+}
+
+
+////////////SAVE GROUP INFO
+function save_grpInfo(){
+
+ImportantInfo();
+
+change_AvailGroups();
+
+change_eventDATES();
+
+change_CompName();
+
+change_event();
+Edit_SucessMSG();
+
+}
+
+
+
+function add_COMPdecri(){
+
+if(admin_txt_comp.value !== ""){
+
+document.getElementById("About_THIScomp").innerHTML = admin_txt_comp.value ;
+}
+
+else{
+document.getElementById("About_THIScomp").innerHTML = "This grouping event is organised by the church of Nigeria";
+}
+}
+add_COMPdecri()
+admin_txt_comp.value = document.getElementById("About_THIScomp").innerHTML;
+
+
+
+function change_CompName(){
+
+if(grp_companynAME.value !== ""){
+
+document.getElementById("sHead").innerHTML = grp_companynAME.value ;
+}
+
+else{
+document.getElementById("sHead").innerHTML = "Church Of Nigeria ";
+}
+}
+change_CompName();
+
+grp_companynAME.value = document.getElementById("sHead").innerHTML;
+
+
+
+
+function change_event(){
+
+if(grp_event.value !== ""){
+
+document.getElementById("_Event").innerHTML = grp_event.value ;
+}
+
+else{
+document.getElementById("_Event").innerHTML = "Fund rasing for church building ";
+}
+}
+change_event();
+
+grp_event.value = document.getElementById("_Event").innerHTML;
+
+
+
+
+
+function change_eventDATES(){
+
+let COMPOSE_date = stating_DT.value;
+
+if(stating_DT.value !== "" ){
+
+document.getElementById("COUNT_down").innerHTML = COMPOSE_date ;
+}
+
+else{
+document.getElementById("COUNT_down").innerHTML = "25 June to 30th June 2022";
+}
+}
+change_eventDATES();
+stating_DT.value = document.getElementById("COUNT_down").innerHTML;
+
+
+
+function toggle_THIS(){
+
+if ( document.getElementById("dis_hidden").style.display === "none"){
+document.getElementById("dis_hidden").style.display = "block";
+}
+
+else{
+
+document.getElementById("dis_hidden").style.display = "none";
+}
+
+}
+
+function toggleoo_THIS(){
+
+if ( document.getElementById("doYOU_delete").style.display === "none"){
+document.getElementById("doYOU_delete").style.display = "block";
+}
+
+else{
+
+document.getElementById("doYOU_delete").style.display = "none";
+}
+
+}
+
+function HIDE_brk(){
+document.getElementById("BRK_BRK").style.display = "none";
+
+}
+
+
+function YES_OrNo(field){
+
+field.style.display = "block";
+
+HIDE_brk()
+
+}
+
+function _OrNo(field){
+
+
+field.style.display = "none";
+
+document.getElementById("BRK_BRK").style.display = "block";
+
+}
+
+//Edit groups
+
+
+//Using select to assign values to rename and co;
+
+function rename_MYgrp(){
+
+let get_grpIndx = groupsADMIN.indexOf(sel_box.value);
+if (get_grpIndx > -1 && rename_field.value !== "" && sel_box.value !== "" ){
+groupsADMIN.splice(get_grpIndx,1,rename_field.value)
+
+console.log(get_grpIndx + " hi")
+}
+else{
+alert("The rename text field is empty");
+return false;
+}
+rename_AllOPTIONSbx()
+//groups.splice(get_grpIndx,1)
+Edit_dAboutGRPS()
+console.log(get_grpIndx)
+
+console.log(groupsADMIN)
+
+console.log(rename_field.value)
+
+}
+
+function delete_MYgrp(){
+let get_grpIndxi = groupsADMIN.indexOf(sel_box.value);
+
+//groups.splice(rename_field.value,1,rename_field.value)
+if (get_grpIndxi > -1){
+groupsADMIN.splice(get_grpIndxi,1)
+}
+
+document.getElementById("doYOU_delete").style.display = "none";
+/*
+console.log(get_grpIndxi)
+console.log(groups)
+console.log(describe_groups)
+console.log(rename_field.value)
+*/
+}
+
+function del_SELBX_info(){
+sel_box.remove(sel_box.selectedIndex);
+}
+
+//////////////// 2 in 1
+function DEL_AboutgrpF(){
+
+EDT_GRPinfo.value = "";
+let edt_grpDesc =  groupsADMIN.indexOf(sel_box.value);
+//const index = groups.findIndex(fruit => fruit === sel_box.value);
+//console.log(index +" hi");
+if(edt_grpDesc > -1 && rename_field.value !== "" && sel_box.value !== ""){
+describe_groups.splice(edt_grpDesc,1)
+}
+
+else{
+alert("There is nothing else to delete");
+
+return false;
+
+}
+console.log(describe_groups.indexOf(EDT_GRPinfo.value));
+delete_MYgrp()
+del_SELBX_info()
+Edit_dAboutGRPS()
+doEdit()
+console.log(describe_groups);
+console.log(groups);
+}
+
+function edit_grpCont(){
+
+let get_grpIndxedit = groupsADMIN.indexOf(sel_box.value);
+
+let edt_grpDesc =  describe_groups.indexOf(EDT_GRPinfo.value);
+
+if (get_grpIndxedit > -1 && rename_field.value !== "" && sel_box.value !== "" && EDT_GRPinfo.value !==""){
+describe_groups.splice(get_grpIndxedit,1,EDT_GRPinfo.value)
+}
+
+else{
+alert("There is nothing left to replace")
+}
+
+//groups.splice(get_grpIndx,1)
+
+
+}
+grp_Avial_Changename.value = document.getElementById("av_grps").innerHTML;
+function change_AvailGroups(){
+
+if(grp_Avial_Changename.value !== ""){
+
+document.getElementById("av_grps").innerHTML = grp_Avial_Changename.value ;
+}
+
+else{
+document.getElementById("av_grps").innerHTML = "Available groups";
+}
+}
+change_AvailGroups()
+
+
+function use_PhoneContact(){
+
+if ( document.getElementById("use_phone").checked === true){
+
+document.getElementById("Phone_contact").style.display = "block";
+document.getElementById("yourGRP_brk1").style.display = "block";
+document.getElementById("yourGRP_brk2").style.display = "block";
+}
+else{
+
+document.getElementById("Phone_contact").style.display = "none";
+document.getElementById("yourGRP_brk1").style.display = "none";
+document.getElementById("yourGRP_brk2").style.display = "none";
+}
+
+}
+
+function use_otherFields(){
+
+if ( document.getElementById("otherflds").checked === true){
+document.getElementById("Name_otherFIELD").style.display = "block";
+document.getElementById("other_contact").style.display = "block";
+
+document.getElementById("oda_FLDbrk1").style.display = "block";
+
+}
+else{
+
+document.getElementById("other_contact").style.display = "none";
+document.getElementById("Name_otherFIELD").style.display = "none";
+
+document.getElementById("oda_FLDbrk1").style.display = "none";
+
+}
+
+}
+
+function hide_emailFields(){
+
+if ( document.getElementById("use_Email").checked === true){
+
+document.getElementById("contact").style.display = "none";
+
+document.getElementById("emailZ_brk1").style.display = "none"
+
+document.getElementById("emailZ_brk2").style.display = "none"
+}
+else{
+
+document.getElementById("contact").style.display = "block";
+
+document.getElementById("emailZ_brk1").style.display = "block"
+
+document.getElementById("emailZ_brk2").style.display = "block"
+}
+
+}
+
+function UseName_Only(){
+if ( document.getElementById("use_NAMEonly").checked === true){
+document.getElementById("contact").style.display = "none";
+
+document.getElementById("emailZ_brk1").style.display = "none";
+
+document.getElementById("emailZ_brk2").style.display = "none";
+
+document.getElementById("other_contact").style.display = "none";
+document.getElementById("Name_otherFIELD").style.display = "none";
+
+document.getElementById("oda_FLDbrk1").style.display = "none";
+
+document.getElementById("Phone_contact").style.display = "none";
+document.getElementById("yourGRP_brk1").style.display = "none";
+document.getElementById("yourGRP_brk2").style.display = "none";
+
+}
+
+else{
+
+document.getElementById("Phone_contact").style.display = "block";
+document.getElementById("yourGRP_brk1").style.display = "block";
+
+}
+
+}
+
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+  
+}
+
+function pick_A_grp(){
+shuffle(groups);
+let remove_1st = groups.shift();
+document.getElementById("urGRP").style.color = "black";
+let dis_ur_grp = document.getElementById("urGRP").innerHTML = remove_1st;
+let compose = MBR_name.value + ", " + MBR_contact.value;
+let Live_feeds = MBR_name.value +", "+ "Joined "  + dis_ur_grp + " on " + new Date().toLocaleString();
+all_members.push(compose);
+
+all_members_Logs.push(Live_feeds);
+
+//console.log(compose);
+
+//Generate live feed
+
+let msg_content = document.createTextNode(Live_feeds);
+
+let list = document.createElement("P")
+
+
+list.style.padding = "10px";
+
+list.style.background = "white";
+
+list.appendChild(msg_content);
+
+document.getElementById("gen_membersAdminxx").appendChild(list);
+
+counter++;
+
+
+//let gen_random_grps = groups[Math.floor(Math.random() * groups.length)];
+
+if (groups.length === 0){
+
+shuff = shuffle(groupsA);
+let re_shuff = shuffle(shuff)
+groups.push(...re_shuff);
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[0])){
+
+arr_0.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[1])){
+
+arr_1.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[2])){
+
+arr_2.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[3])){
+
+arr_3.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[4])){
+
+arr_4.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[5])){
+
+arr_5.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[6])){
+
+arr_6.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[7])){
+
+arr_7.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[8])){
+
+arr_8.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[9])){
+
+arr_9.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[10])){
+
+arr_10.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[11])){
+
+arr_11.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[12])){
+
+arr_12.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[13])){
+
+arr_13.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[14])){
+
+arr_14.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[15])){
+
+arr_15.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[16])){
+
+arr_16.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[17])){
+
+arr_17.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[18])){
+
+arr_18.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[19])){
+
+arr_19.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[20])){
+
+arr_20.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[21])){
+
+arr_21.push(inpi.value);
+
+}
+if ( document.getElementById("urGRP").innerHTML === (groupsB[22])){
+
+arr_22.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[23])){
+
+arr_23.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[24])){
+
+arr_24.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[25])){
+
+arr_25.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[26])){
+
+arr_26.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[27])){
+
+arr_27.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[28])){
+
+arr_28.push(inpi.value);
+
+}
+
+if ( document.getElementById("urGRP").innerHTML === (groupsB[29])){
+
+arr_29.push(inpi.value);
+
+}
+
+show_sucess()
+
+document.getElementById("msg_counter").innerHTML = counter + " messages";
+/*
+console.log(arr_0 + " 1")
+console.log(arr_1 + " 2")
+console.log(arr_2 + " 3")
+console.log(arr_3 + " 4")
+console.log(arr_4 + " 5")
+console.log(arr_5 + " 6")
+console.log(arr_6 + " 7")
+console.log(arr_7 + " 8")
+console.log(arr_8 + " 9")
+console.log(arr_9 + " 10")
+console.log(arr_11 + " 11")
+console.log(arr_12 + " 12")
+console.log(arr_13 + " 13")
+console.log(arr_14 + " 14")
+console.log(arr_15 + " 15")
+console.log(arr_16 + " 16")
+console.log(arr_17 + " 17")
+console.log(arr_18 + " 18")
+console.log(arr_19 + " 19")
+console.log(arr_20 + " 20")
+console.log(arr_21 + " 21")
+console.log(arr_22 + " 22")
+console.log(arr_23 + " 23")
+console.log(arr_24 + " 24")
+console.log(arr_25 + " 25")
+console.log(arr_26 + " 26")
+console.log(arr_27 + " 27")
+console.log(arr_28 + " 28")
+console.log(arr_29 + " 29")
+console.log(arr_30 + " 30")
+*/
+console.log(groups)
+console.log(all_members)
+
+}
+
+
+function clear_allLvfeeds(){
+
+document.getElementById("gen_membersAdminxx").innerHTML = "";
+
+counter = 0;
+
+document.getElementById("msg_counter").innerHTML = "";
+
+}
+
+
+
+//refs the customfield input.
+
+//Creategroups()
+ let first_msg = "";
+ let Sec_msgFinal = "";
+ 
+  let thirdMsg_nCo = "";
+  
+  Wellcome_MsgSucess = "Odogwu <name>, how far na?. You are Officially wellcomed to <Group>. Bring a bottle of anointing oil and 1 million naira when coming. Also bring ur babes naked" ;
+  
+  admin_txt_B_Success.value = Wellcome_MsgSucess;
+  
+  
+  
+function Edit_SucessMSG(){
+
+Wellcome_MsgSucess.replace(Wellcome_MsgSucess,admin_txt_B_Success.value)
+ 
+Wellcome_Msg = admin_txt_B_Success.value;
+ 
+ //console.log(admin_txt_B_Success.value = Wellcome_Msg);
+
+
+//let get_Adminsucex_text =  admin_txt_B_Success.value;
+
+
+ //console.log(get_Adminsucex_text + " hi");
+ 
+
+ 
+let salute_msg = Wellcome_Msg;
+
+ //console.log(salute_msg);
+
+
+let Second_Msg = salute_msg.substring(salute_msg.lastIndexOf('e>') + 2)
+
+ //console.log(Second_Msg);
+ 
+ thirdMsg_nCo = Second_Msg.substring(Second_Msg.lastIndexOf('p>')+ 2 )
+ 
+ //console.log(thirdMsg_nCo);
+ 
+ 
+first_msg = salute_msg.replace(Second_Msg," ").replace("<name>","");
+
+ //console.log(first_msg);
+ 
+ Sec_msgFinal = Second_Msg.replace(thirdMsg_nCo," ").replace(" <Group>","");
+ 
+
+
+
+
+}
+
+//Edit_SucessMSG()
+
+
+
+function show_sucess(){
+
+document.getElementById("success").style.display = "block";
+//document.getElementById("success_INNER").innerHTML = first_msg
+document.getElementById("success_INNER").innerHTML = "<h2>"+ "Wellcome to " +UR_grp.innerHTML+ "</h2>" + "<br>" + "<div>" + first_msg + MBR_name.value +Sec_msgFinal+UR_grp.innerHTML + thirdMsg_nCo + "</div>" ;
+}
+
+
+function close_sucess(){
+document.getElementById("success").style.display = "none";
+}
+
+
+
+// Loop All The Groups
+/*function see_grps(){
+let shw_grps = "";
+for (let g = 0; g < groupsSEE.length; g++){
+
+shw_grps += "&#9899 " + groupsSEE[g] + "<br>";
+
+
+
+}
+document.getElementById("list_grps").innerHTML = shw_grps;
+}
+see_grps()
+
+
+//Pick a group
+*/
+
+/*
+function All_gps(){
+
+if (arr_0.length > 0){
+document.getElementById("SEE_dGrps1").style.display = "block";
+
+document.getElementById("SEE_dGrps1").innerHTML = "&#9899 " + groupsADMIN[0] + "&nbsp " +"<small>" + arr_0.length  +" members" +"</small>";
+
+document.getElementById("SEE_dGrpsADMIN1").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN1").innerHTML = "&#9899 " + groupsADMIN[0] + "&nbsp  " +"<small>" + arr_0.length +" members" +"</small>";
+
+}
+
+if (arr_1.length > 0){
+
+document.getElementById("SEE_dGrps2").style.display = "block";
+
+document.getElementById("SEE_dGrps2").innerHTML = "&#9899 " + groupsADMIN[1] + "&nbsp " + "<small>" + arr_1.length +" members"+"</small>";
+
+document.getElementById("SEE_dGrpsADMIN2").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN2").innerHTML = "&#9899 " + groupsADMIN[1] + "&nbsp  " +"<small>" + arr_1.length +" members" +"</small>";
+}
+
+if (arr_2.length > 0){
+
+document.getElementById("SEE_dGrps3").style.display = "block";
+
+document.getElementById("SEE_dGrps3").innerHTML = "&#9899 " + groupsADMIN[2] + "&nbsp " + "<small>" + arr_2.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN3").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN3").innerHTML = "&#9899 " + groupsADMIN[2] + "&nbsp  " +"<small>" + arr_2.length +" members" +"</small>";
+}
+
+if (arr_3.length > 0){
+
+document.getElementById("SEE_dGrps4").style.display = "block";
+
+document.getElementById("SEE_dGrps4").innerHTML = "&#9899 " + groupsADMIN[3] + "&nbsp " + "<small>" + arr_3.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN4").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN4").innerHTML = "&#9899 " + groupsADMIN[3] + "&nbsp  " +"<small>" + arr_3.length +" members" +"</small>";
+}
+
+if (arr_4.length > 0){
+
+document.getElementById("SEE_dGrps5").style.display = "block";
+
+document.getElementById("SEE_dGrps5").innerHTML = "&#9899 " + groupsADMIN[4] + "&nbsp " + "<small>" + arr_4.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN5").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN5").innerHTML = "&#9899 " + groupsADMIN[4] + "&nbsp  " +"<small>" + arr_4.length +" members" +"</small>";
+}
+
+if (arr_5.length > 0){
+
+document.getElementById("SEE_dGrps6").style.display = "block";
+
+document.getElementById("SEE_dGrps6").innerHTML = "&#9899 " + groupsADMIN[5] + "&nbsp " + "<small>" + arr_5.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN6").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN6").innerHTML = "&#9899 " + groupsADMIN[5] + "&nbsp  " +"<small>" + arr_5.length +" members" +"</small>";
+}
+
+if (arr_6.length > 0){
+
+document.getElementById("SEE_dGrps7").style.display = "block";
+
+document.getElementById("SEE_dGrps7").innerHTML = "&#9899 " + groupsADMIN[6] + "&nbsp " + "<small>" + arr_6.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN7").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN7").innerHTML = "&#9899 " + groupsADMIN[6] + "&nbsp  " +"<small>" + arr_6.length +" members" +"</small>";
+}
+
+if (arr_7.length > 0){
+
+document.getElementById("SEE_dGrps8").style.display = "block";
+
+document.getElementById("SEE_dGrps8").innerHTML = "&#9899 " + groupsADMIN[7] + "&nbsp " + "<small>" + arr_7.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN8").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN8").innerHTML = "&#9899 " + groupsADMIN[7] + "&nbsp  " +"<small>" + arr_7.length +" members" +"</small>";
+}
+
+if (arr_8.length > 0){
+
+document.getElementById("SEE_dGrps9").style.display = "block";
+
+document.getElementById("SEE_dGrps9").innerHTML = "&#9899 " + groupsADMIN[8] + "&nbsp " + "<small>" + arr_8.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN9").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN9").innerHTML = "&#9899 " + groupsADMIN[8] + "&nbsp  " +"<small>" + arr_8.length +" members" +"</small>";
+}
+
+if (arr_9.length > 0){
+
+document.getElementById("SEE_dGrps10").style.display = "block";
+
+document.getElementById("SEE_dGrps10").innerHTML = "&#9899 " + groupsADMIN[9] + "&nbsp " + "<small>" + arr_9.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN10").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN10").innerHTML = "&#9899 " + groupsADMIN[9] + "&nbsp  " +"<small>" + arr_9.length +" members" +"</small>";
+}
+
+if (arr_10.length > 0){
+
+document.getElementById("SEE_dGrps11").style.display = "block";
+
+document.getElementById("SEE_dGrps11").innerHTML = "&#9899 " + groupsADMIN[10] + "&nbsp " + "<small>" + arr_10.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN11").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN11").innerHTML = "&#9899 " + groupsADMIN[10] + "&nbsp  " +"<small>" + arr_10.length +" members" +"</small>";
+}
+
+if (arr_11.length > 0){
+
+document.getElementById("SEE_dGrps12").style.display = "block";
+
+document.getElementById("SEE_dGrps12").innerHTML = "&#9899 " + groupsADMIN[11] + "&nbsp " + "<small>" + arr_11.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN12").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN12").innerHTML = "&#9899 " + groupsADMIN[11] + "&nbsp  " +"<small>" + arr_11.length +" members" +"</small>";
+}
+
+if (arr_12.length > 0){
+
+document.getElementById("SEE_dGrps13").style.display = "block";
+
+document.getElementById("SEE_dGrps13").innerHTML = "&#9899 " + groupsADMIN[12] + "&nbsp " + "<small>" + arr_12.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN13").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN13").innerHTML = "&#9899 " + groupsADMIN[12] + "&nbsp  " +"<small>" + arr_12.length +" members" +"</small>";
+}
+
+if (arr_13.length > 0){
+
+document.getElementById("SEE_dGrps14").style.display = "block";
+
+document.getElementById("SEE_dGrps14").innerHTML = "&#9899 " + groupsADMIN[13] + "&nbsp " + "<small>" + arr_13.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN14").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN14").innerHTML = "&#9899 " + groupsADMIN[13] + "&nbsp  " +"<small>" + arr_13.length +" members" +"</small>";
+}
+
+if (arr_14.length > 0){
+
+document.getElementById("SEE_dGrps15").style.display = "block";
+
+document.getElementById("SEE_dGrps15").innerHTML = "&#9899 " + groupsADMIN[14] + "&nbsp " + "<small>" + arr_14.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN15").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN15").innerHTML = "&#9899 " + groupsADMIN[14] + "&nbsp  " +"<small>" + arr_14.length +" members" +"</small>";
+}
+
+if (arr_15.length > 0){
+
+document.getElementById("SEE_dGrps16").style.display = "block";
+
+document.getElementById("SEE_dGrps16").innerHTML = "&#9899 " + groupsADMIN[15] + "&nbsp " + "<small>" + arr_15.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN16").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN16").innerHTML = "&#9899 " + groupsADMIN[15] + "&nbsp  " +"<small>" + arr_15.length +" members" +"</small>";
+}
+
+if (arr_16.length > 0){
+
+document.getElementById("SEE_dGrps17").style.display = "block";
+
+document.getElementById("SEE_dGrps17").innerHTML = "&#9899 " + groupsADMIN[16] + "&nbsp " + "<small>" + arr_16.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN17").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN17").innerHTML = "&#9899 " + groupsADMIN[16] + "&nbsp  " +"<small>" + arr_16.length +" members" +"</small>";
+}
+
+if (arr_17.length > 0){
+
+document.getElementById("SEE_dGrps18").style.display = "block";
+
+document.getElementById("SEE_dGrps18").innerHTML = "&#9899 " + groupsADMIN[17] + "&nbsp " + "<small>" + arr_17.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN18").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN18").innerHTML = "&#9899 " + groupsADMIN[17] + "&nbsp  " +"<small>" + arr_17.length +" members" +"</small>";
+}
+
+if (arr_18.length > 0){
+
+document.getElementById("SEE_dGrps19").style.display = "block";
+
+document.getElementById("SEE_dGrps19").innerHTML = "&#9899 " + groupsADMIN[18] + "&nbsp " + "<small>" + arr_18.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN19").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN19").innerHTML = "&#9899 " + groupsADMIN[18] + "&nbsp  " +"<small>" + arr_18.length +" members" +"</small>";
+}
+
+if (arr_19.length > 0){
+
+document.getElementById("SEE_dGrps20").style.display = "block";
+
+document.getElementById("SEE_dGrps20").innerHTML = "&#9899 " + groupsADMIN[19] + "&nbsp " + "<small>" + arr_19.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN20").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN20").innerHTML = "&#9899 " + groupsADMIN[19] + "&nbsp  " +"<small>" + arr_19.length +" members" +"</small>";
+}
+
+if (arr_20.length > 0){
+
+document.getElementById("SEE_dGrps21").style.display = "block";
+
+document.getElementById("SEE_dGrps21").innerHTML = "&#9899 " + groupsADMIN[20] + "&nbsp " + "<small>" + arr_20.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN21").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN21").innerHTML = "&#9899 " + groupsADMIN[20] + "&nbsp  " +"<small>" + arr_20.length +" members" +"</small>";
+}
+
+if (arr_21.length > 0){
+
+document.getElementById("SEE_dGrps22").style.display = "block";
+
+document.getElementById("SEE_dGrps22").innerHTML = "&#9899 " + groupsADMIN[21] + "&nbsp " + "<small>" + arr_21.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN22").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN22").innerHTML = "&#9899 " + groupsADMIN[21] + "&nbsp  " +"<small>" + arr_21.length +" members" +"</small>";
+}
+
+if (arr_22.length > 0){
+
+document.getElementById("SEE_dGrps23").style.display = "block";
+
+document.getElementById("SEE_dGrps23").innerHTML = "&#9899 " + groupsADMIN[22] + "&nbsp " + "<small>" + arr_22.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN23").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN23").innerHTML = "&#9899 " + groupsADMIN[22] + "&nbsp  " +"<small>" + arr_22.length +" members" +"</small>";
+}
+
+if (arr_23.length > 0){
+
+document.getElementById("SEE_dGrps24").style.display = "block";
+
+document.getElementById("SEE_dGrps24").innerHTML = "&#9899 " + groupsADMIN[23] + "&nbsp " + "<small>" + arr_23.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN24").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN24").innerHTML = "&#9899 " + groupsADMIN[23] + "&nbsp  " +"<small>" + arr_23.length +" members" +"</small>";
+}
+
+if (arr_24.length > 0){
+
+document.getElementById("SEE_dGrps25").style.display = "block";
+
+document.getElementById("SEE_dGrps25").innerHTML = "&#9899 " + groupsADMIN[24] + "&nbsp " + "<small>" + arr_24.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN25").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN25").innerHTML = "&#9899 " + groupsADMIN[24] + "&nbsp  " +"<small>" + arr_24.length +" members" +"</small>";
+}
+
+if (arr_25.length > 0){
+
+document.getElementById("SEE_dGrps26").style.display = "block";
+
+document.getElementById("SEE_dGrps26").innerHTML = "&#9899 " + groupsADMIN[25] + "&nbsp " + "<small>" + arr_25.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN26").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN26").innerHTML = "&#9899 " + groupsADMIN[25] + "&nbsp  " +"<small>" + arr_25.length +" members" +"</small>";
+}
+
+if (arr_26.length > 0){
+
+document.getElementById("SEE_dGrps27").style.display = "block";
+
+document.getElementById("SEE_dGrps27").innerHTML = "&#9899 " + groupsADMIN[26] + "&nbsp " + "<small>" + arr_26.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN27").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN27").innerHTML = "&#9899 " + groupsADMIN[26] + "&nbsp  " +"<small>" + arr_26.length +" members" +"</small>";
+}
+
+if (arr_27.length > 0){
+
+document.getElementById("SEE_dGrps28").style.display = "block";
+
+document.getElementById("SEE_dGrps28").innerHTML = "&#9899 " + groupsADMIN[27] + "&nbsp " + "<small>" + arr_27.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN28").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN28").innerHTML = "&#9899 " + groupsADMIN[27] + "&nbsp  " +"<small>" + arr_27.length +" members" +"</small>";
+}
+
+if (arr_28.length > 0){
+
+document.getElementById("SEE_dGrps29").style.display = "block";
+
+document.getElementById("SEE_dGrps29").innerHTML = "&#9899 " + groupsADMIN[28] + "&nbsp " + "<small>" + arr_28.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN29").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN29").innerHTML = "&#9899 " + groupsADMIN[28] + "&nbsp  " +"<small>" + arr_28.length +" members" +"</small>";
+}
+
+if (arr_29.length > 0){
+
+document.getElementById("SEE_dGrps30").style.display = "block";
+
+document.getElementById("SEE_dGrps30").innerHTML = "&#9899 " + groupsADMIN[29] + "&nbsp " + "<small>" + arr_29.length + " members" + "</small>";
+
+document.getElementById("SEE_dGrpsADMIN30").style.display = "block";
+
+document.getElementById("SEE_dGrpsADMIN30").innerHTML = "&#9899 " + groupsADMIN[29] + "&nbsp  " +"<small>" + arr_29.length +" members" +"</small>";
+}
+Edit_SucessMSG();
+shuffle(groups);
+}
+
+All_gps()
+
+*/
+
+
+
+//////Function Create group
+
+let About_groupINFO = [];
+
+function Create_URgroup(){
+
+if (groupsADMIN.length > 30){
+
+alert("Sorry!,this current version of AGB can only host 30 groups")
+
+return false;
+}
+
+let OnlyGrp_Name = grp_name.value;
+
+let Groupz_Info = admin_txt_B.value;
+
+let grpNa_me = grp_name.value + " , " + admin_txt_B.value;
+
+//groups.push(OnlyGrp_Name);
+
+//groupsA.push(OnlyGrp_Name);
+
+//groupsB.push(OnlyGrp_Name);
+
+//groupsSEE.push(OnlyGrp_Name);
+
+groupsADMIN.push(OnlyGrp_Name);
+
+ About_groupINFO.push(grpNa_me);
+ 
+ describe_groups.push(admin_txt_B.value);
+ 
+ console.log(groupsSEE);
+ 
+ 
+ 
+ 
+ 
+  let selection_F = document.getElementById("options");
+  
+  let create_dS_F = document.createElement("option");
+  
+  create_dS_F.text = grp_name.value;
+  
+  selection_F.add(create_dS_F);
+  doEdit()
+  Edit_dAboutGRPS()
+ 
+ /*
+let Header_content = document.createTextNode(OnlyGrp_Name);
+
+let body_content = document.createTextNode(Groupz_Info);
+
+let hTAG = document.createElement("div")
+
+
+let x = hTAG.appendChild(Header_content);
+
+let create_para = document.createElement("P");
+
+  create_para.padding = "20px";
+  
+   create_para.padding.left = "50px";
+
+  create_para.style.background = "white";
+
+  create_para.appendChild(hTAG)
+
+  create_para.appendChild(body_content);
+
+
+
+document.getElementById("About_EVERYgroup").appendChild(create_para);
+
+*/
+
+
+}
+
+
+function shownHide(){
+
+if ( document.getElementById("success1").style.width = (98 + "%") ){
+
+document.getElementById("success1").style.width = 15 + "%";
+
+document.getElementById("success1").style.height = 65 + "px";
+
+document.getElementById("success1").style.left = 10 + "px";
+
+document.getElementById("success1").style.top = 550 + "px";
+
+document.getElementById("success1").style.resize = "none";
+
+
+
+//document.getElementById("Admin_control").style.width = 100 + "%";
+
+//document.getElementById("Admin_control").style.height = 76 + "px";
+
+document.getElementById("Admin_control").style.display = "none";
+
+document.getElementById("small_admin").style.display = "block";
+
+document.getElementById("small_admin").style.height = 66 + "px";
+
+document.getElementById("hide").style.display = "none";
+document.getElementById("show").style.display = "block";
+}
+
+
+}
+
+
+
+
+function close_it(){
+
+if (document.getElementById("success1").style.display = "block"){
+document.getElementById("success1").style.display = "none";
+}
+}
+
+function SHOW(){
+
+document.getElementById("success1").style.width = 100 + "%";
+
+document.getElementById("success1").style.height = 600 + "px";
+document.getElementById("success1").style.left = 1 + "px";
+
+document.getElementById("success1").style.top = 10 + "px";
+
+document.getElementById("success1").style.resize = "block";
+
+//document.getElementById("hide").innerHTML = "show";
+
+//document.getElementById("Admin_control").style.width = 100 + "%";
+
+//document.getElementById("Admin_control").style.height = 76 + "px";
+
+
+
+//document.getElementById("small_admin").style.height = 66 + "px";
+
+
+//document.getElementById("hide").innerHTML = "hide";
+
+document.getElementById("show").style.display = "none";
+document.getElementById("hide").style.display = "block";
+setTimeout(()=>{
+
+document.getElementById("Admin_control").style.display = "block";
+
+document.getElementById("small_admin").style.display = "none";
+},150)
+}
+
+
+
+function Creategroups(){
+if(document.getElementById("success1").style.width = (15 + "%")){
+document.getElementById("success1").style.display = "block";
+SHOW()
+}
+else{
+document.getElementById("success1").style.display = "block";
+document.getElementById("success1").style.left = 14 + "px";
+}
+}
+//Creategroups()
+
+
+function ImportantInfo(){
+
+document.getElementById("comeWith_BringTHIS").innerHTML = admin_txt_BVIP.value;
+
+}
+
+admin_txt_BVIP.value = document.getElementById("comeWith_BringTHIS").innerHTML;
+
+
+
+// Reset the custom field
+
+function reset_custMSG(){
+document.getElementById("admin_txt_B_Success").value = "Odogwu <name>, how far na?. You are Officially wellcomed to <Group>. Bring a bottle of anointing oil and 1 million naira when coming. Also bring ur babes naked";
+
+}
+
+//Display all the groups with the group info, total number of members, etc.
+
+let everyGroupCreated = [arr_0,arr_1,arr_2,arr_3,arr_4,arr_5,arr_6,arr_7,arr_8,arr_9,arr_10,arr_11,arr_12,arr_13,
+  arr_14,arr_15,arr_16,arr_17,arr_18,arr_19,arr_20,arr_21,arr_22,arr_23,arr_24,arr_25,arr_26,arr_27,arr_28,arr_29];
+
+  let nameOfGroups = [...groupsADMIN]
+ let getGrpName;
+ let  grpExt;
+
+  //Loop through the veryGroupCreated array, cut out all the arrays then display their contents
+  function showEveryGroup(){
+    for (let g = 0 ; g < groupsADMIN.length; g++){
+      let masterDiv = document.createElement("div");
+      let eachGroupDiv = document.createElement("div");
+      let grpBody = document.createElement("div");
+      let grpHeader = document.createElement("div");
+      
+      eachGroupDiv.classList.add("eachGroupDiv");
+      grpHeader.classList.add("headerListGrp");
+
+      grpExt = everyGroupCreated.shift();
+      getGrpName = nameOfGroups.shift()
+
+      console.log(getGrpName  + ' ' + grpExt.length + ' ' + "members")
+
+      let listGroupsnMembers = document.createTextNode(getGrpName  + ' ' + grpExt.length + ' ' + "memberszzzzzzzzzzzzzzzzzzzzzzzzzzzz" );
+      let listGroupsnMembers1 = document.createTextNode(getGrpName  + ' ' + grpExt.length + ' ' + "memberszzzzzzzzzzzzzzzzzzzzzzzzzzzz" );
+
+      let addGrpName = document.createTextNode(getGrpName);
+      let everyMember = " ";
+      for(let ag = 0 ; ag < grpExt.length; ag++){
+        everyMember += ag + "." +  grpExt[ag] + "<br/> ";
+        
+      }
+      //console.table(everyMember)
+
+      grpHeader.appendChild(addGrpName)
+      grpBody.innerHTML = everyMember
+      
+      eachGroupDiv.appendChild(grpHeader)
+      eachGroupDiv.appendChild(grpBody)
+      
+      masterDiv.appendChild(eachGroupDiv)
+      document.getElementById("EveryGroup").appendChild(masterDiv);
+      document.getElementById("list_grps").appendChild(listGroupsnMembers)
+      document.getElementById("totalMemberDB").appendChild(listGroupsnMembers1)
+
+    }
+  }
+
+  showEveryGroup()
+console.table(everyGroupCreated.length)

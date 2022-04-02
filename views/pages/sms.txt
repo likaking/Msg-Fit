@@ -1,0 +1,44 @@
+          <!--
+                       <div class="flex-container">
+                        <div  id = "flex-left">
+                            <div style="margin-bottom: 20px;">Login to your email account</div>
+                            <div> <input type="text" placeholder="Host" class = "credens" id = "whoHost" name = "host"></div>
+                            <div> <input type="text" placeholder="Email service " class = "credens" id = "emailServ" name = "emailHost"></div>
+                            <div><input type="text" placeholder="Port" class = "credens" name = "port" ></div>
+                            <div><input type="text" placeholder="Email" class = "credens" name = "username"></div>
+                            
+                            <div><input type="password" placeholder="Password" class = "credens" name = "password" id = "pw" >
+
+                              
+
+                                <button type="button" id = "btns"><i class = "fa fa-eye-slash"></i></button>
+
+                            
+                            </div>
+                        </div>
+                        <div  id = "flex-right">
+                            <div style="margin-bottom: 20px;" id = "learnHeader">How to login</div>
+                            <br>
+                            <br>
+                            
+                           
+                            
+                            <div  id = "learn" >
+                            Host : mail.yourwebsite.com or smtp.yourwebsite.com
+                            <br>
+                            <br>
+                            Email Service : Your hosting company
+                            <br>
+                            <br>
+                            Port : Your web hosting port
+                            <br>
+                            <br>
+                            Email : Your web mail address
+                            <br>
+                            <br>
+                            Password : Your Password
+                        </div>
+                        </div>
+                      </div>
+                        <button type="submit" id = "processMsgs"  >Login & Send Messages</button>
+                    </div>-->

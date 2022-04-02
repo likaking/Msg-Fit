@@ -1,0 +1,528 @@
+<!doctype html>
+<html>
+    
+<head>
+    
+<meta charset="utf-8">
+<title>Msg Celeb</title>
+<meta name="Msg Celeb" content="Custom message generator">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<!-- FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images\msgFavicon.png">
+<!-- FAVICON -->
+
+<!-- STYLESHEET -->
+<link href="css/style.css" rel="stylesheet" type="text/css" >
+<link rel="stylesheet" type="text/css" href="css/responsive.css" >
+
+
+
+<script type="text/javascript" src="js/script.js"></script>
+
+
+
+<!-- STYLESHEET -->
+
+
+
+</head>
+
+<body body style="visibility: hidden;" onload="js_Load()">
+
+<!-- WRAPPER -->
+<div class="wrapper">
+	
+    <!-- CONTAINER -->
+
+            <!-- HEADER -->
+           <header> 
+            <div id="header"> 
+                <div class="container">
+                 	<div class="logo"><a href="index.html"><img src="images/logo.png" alt="">Msg<em> celeb</em></a></div>
+                    	 
+                	<nav >
+                    <a class="toggleMenu" href="#" >Menu</a>
+                    <ul class="nav" >
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="inner1.html">About us</a></li>
+                        <li><a href="inner2.html">Features</a></li>
+                        <li ><a href="inner3.html">Contact</a></li>
+                    </ul>
+                    </nav>
+                    
+           			<div class="clear_0"></div>
+                </div>             	
+                </div>	
+             </header>   
+            <!-- HEADER -->
+            
+           
+            <section>
+            <div id="inner3">
+                
+            	<div class="container">
+                  
+                    <div id="links" style="font-size: 0px;">
+                        <button type="button" class = "tags" id="name" >Name</button>
+                        <button type="button" class = "tags" id="address">Address</button>
+                        <button type="button" class = "tags" id="dob">Date of birth</button>
+                        <button type="button" class = "tags" id="email">Email</button>
+                        <button type="button" class = "tags" id="phoneNumber">Phone number</button>
+
+
+                        <button type="button" class = "tags" id="company">company</button>
+                        <button type="button" class = "tags" id="department">Department</button>
+                        <button type="button" class = "tags" id="skills">Skills</button>
+                       
+                        <button type="button" class = "tags" id="account">Account</button>
+                        <button type="button" class = "tags" id="password">Password</button>
+                        <button type="button" class = "tags" id="time" >Time</button>
+                       
+                        <button type="button" class = "tags" id="date">Date</button>
+                  
+                  
+                        <button type="button" class = "tags" id="number">Number</button>
+                        <button type="button" class = "tags" id="location">Location</button>
+                        <button type="button" class = "tags" id="nextOfkin">Next of Kin</button>
+                        <button type="button" class = "tags" id="tribe">Tribe</button>
+                        <div>
+                           
+                            
+                        </div>
+                   
+                    </div>
+                    
+                         
+                      
+                    <div id="customTag" class = "settings">
+
+                        
+                       
+                        <button type ="button" class ="question">&#63;</button>
+
+                        <button id = "createCTags"  onclick="createTag()">Create Custom Tags</button> 
+                    
+                        <input type="text" placeholder="E.g. &#60;Car&#62;" id="customTagBx" >
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        
+                       
+                        <div class = "explanation" style="display:none"><i>
+                        Create your own custom tags not readily avialable in the tag menu above. This will enable you create custom tags that will
+                        rhyme with the information in your data. For instance you can easily create a car tag ("&#60;Car&#62;") for all the cars 
+                        avialable in your data,etc.
+
+
+                
+                       
+                        </i>
+                          
+                        </div>
+                    </div>
+                      
+                    
+                
+                    <div id="message">
+                        <div id="myMessage"  style="height: 230px;width: 975px;">
+                            </div>
+                        <div id = "text" contentEditable="true" placeholder = "Type your message here. Click any of the above buttons to insert tags in the text box">
+                            <p  >Type your message here. Insert tags in this text box with any of the tag buttons above</p>
+                        </div>
+                   
+                    <div id="data">
+                        <textarea   placeholder="Data should be in a CSV format: Name,email,address,department, etc. (seperate each detial with a comma)"  spellcheck="false"  id = "details"></textarea>
+                    </div>
+                    <button type="button" id = "createMsgs"  onclick="processData()">Generate Messages</button>
+                    <div id="dashBoard">
+
+                        <form id = "dataSchema">
+                         
+                            <div class="dbHeader">Add Data Schema</div>
+                        <div id="ourSchema" class = "settings">
+                       
+                           
+                            <button type ="button" class ="question">&#63;</button>
+
+                            <div >
+                            <div class = "dSchema" id = "schemaTags">
+
+                                Whats does each word in each line of  your data represent? <i>e.g.</i> The first word represent name,the second word represent email and so forth
+                                <br/>
+                                <br/>
+
+                              
+                                <p id="datalinks" style="font-size: 0px;">
+                                    <button type="button" class = "datatags" id="dBname" >Name</button>
+                                    <button type="button" class = "datatags" id="dBaddress">Address</button>
+                                    <button type="button" class = "datatags" id="dBdob">Date of birth</button>
+                                    <button type="button" class = "datatags" id="dBemail">Email</button>
+                                    <button type="button" class = "datatags" id="dBphoneNumber">Phone number</button>
+            
+            
+                                    <button type="button" class = "datatags" id="dBcompany">company</button>
+                                    <button type="button" class = "datatags" id="dBdepartment">Department</button>
+                                    <button type="button" class = "datatags" id="dBskills">Skills</button>
+                                   
+                                    <button type="button" class = "datatags" id="dBaccount">Account</button>
+                                    <button type="button" class = "datatags" id="dBpassword">Password</button>
+                                    <button type="button" class = "datatags" id="dBtime" >Time</button>
+                                   
+                                    <button type="button" class = "datatags" id="dBdate">Date</button>
+                              
+                              
+                                    <button type="button" class = "datatags" id="dBnumber">Number</button>
+                                    <button type="button" class = "datatags" id="dBlocation">Location</button>
+                                    <button type="button" class = "datatags" id="dBnextOfkin">Next of Kin</button>
+                                    <button type="button" class = "datatags" id="dBtribe">Tribe</button>
+                                </p>
+
+
+
+                            </div>
+
+                           <p style="text-align: center;">Seperate each tag with a comma. Click the buttons above to append tags to the data schema area</p>
+                           <br/>
+
+                            <div class = "dSchema">
+                               
+                                <textarea  placeholder=" Here is a good example of a data schema: &#60;name&#62;,&#60;email&#62;,&#60;address&#62;,&#60;account&#62;,&#60;skills&#62;,&#60;tribe&#62; " id="dataSchBox" style="width: 100%; height: 100px;" ></textarea>
+                              
+                            </div>
+                            </div>
+
+                            <div></div>
+                           
+                            <div class = "explanation" style="display:none"><i>
+                                <i><small>*Please note each data must follow a uniform pattern*</small></i>
+                                
+                            <br/> <br/>
+                            The default data schema is: &#60;Next of kin&#62;,&#60;Next of kin&#62;,&#60;Next of kin&#62;,&#60;Next of kin&#62;,&#60;Next of kin&#62;
+                            <br/> <br/>
+                            A data schema will enable the system know the arrangement format your data. This system has a defined data format, what happens 
+                            if you have a diffrent format? You will get mix of data.
+                            <br/>
+                            <br/>
+
+                            Lets assume this is what each line of your data look like:
+                            <br/>
+                            <br/>
+                            
+                            Grace Amadi, graceAm@gmail.com, No. 25 Queens Estate London, Airtel Africa, 17/1/1994
+                            <br/>
+                            Wendy Brown, Brown@gmail.com, No. 5 Brown Estate New York, Nike, 17/1/1991
+                            <br/>
+                            Alexander Anderson,  Anderson@gmail.com, No. 2 Free Country Berlin, Airtel Africa, 17/1/1995
+                            <br/>
+                            Sarah Kofo, mrsKoffo@gmail.com, No. 80 Greater Accra Accra, Bank of Ghana, 17/1/1985
+                            <br/>
+                            Stephanie Sutherland, Sutherland@gmail.com, No. 33 golden road, Paris, Channel, 17/1/1981
+                            <br/>
+                            etc.
+                            <br/> <br/>
+                            The data before the first comma in every line is a "name", the data before the second comma is an "email", the data before the third comma is an "address",
+                            the data before the forth comma is "where the induvidual is employed", and the last but not the least is  "date of birth".
+                            <br/> <br/>
+                            Here is what the date schema will look like: &#60;name&#62;,&#60;email&#62;,&#60;address&#62;,&#60;company&#62;,&#60;date of birth&#62;
+                            
+                            
+                            
+                            
+                            <div class=""></div>
+                            
+                           
+                              
+                            </div>
+                        </div>
+                          
+                        
+                    </form>
+
+
+                        <form id = "unikNum">
+                         
+                            <div class="dbHeader">Allocate Unique Numbers</div>
+                        <div id="uniqueNo" class = "settings">
+
+                            
+                           
+                            <button type ="button" class ="question">&#63;</button>
+                            <input type="checkbox" > <label>Give each person a unique number :  </label>  
+                        
+                            <input type="text" placeholder="ABC" id="genNum" class = "txtBox">
+                            <small><i> *Add only the alphabet part*</i></small> 
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            
+                           
+                            <div class = "explanation" style="display:none"><i>
+                            <i><small>*Works with the 	&#60;number&#62; tag*</small></i>
+                            <br><br>
+                             Allocate unique/serial numbers like ABC00001,ABC00002,etc, to each person. All you have to do is type in the alphebetical
+                             part of the unique number, then the system will take care of the numerical part and also assign it to each name accordinly.
+                            </i>
+                              
+                            </div>
+                        </div>
+                          
+                        
+                    </form>
+
+                    <form id = "shDates">
+                         
+                        <div class="dbHeader">Shedule Different Dates</div>
+                    <div id="ourdates" class = "settings">
+                       
+                       
+                        <button type ="button" class ="question">&#63;</button>
+                        <div>
+                       <label>Number of people per day: </label>  
+                    
+                        <input type="number" placeholder="100" id="sheduleDates"  class = "txtBox">
+                        </div>
+                        <div style="margin-top: 10px">
+                        <label style="vertical-align: top">Add the dates: </label>  
+                   
+                        <textarea type="number" placeholder="2/8/2022,2/9/2022,2/10/2022,2/11/2022,2/12/2022 " id="addDates"  class = "txtBox"></textarea>
+                        <label style="vertical-align: top"><i><small>*Seperate each date with a comma*</small></i> </label>  
+                        <button type = "button" onclick="processDate()">Testin Date Processor</button>
+                        </div>
+                        <div></div>
+                        <div></div>
+                       
+                        <div class = "explanation" style="display:none"><i>
+                        <i><small>*Works with the 	&#60;date&#62; tag*</small></i>
+                        <br>
+                        <br>
+                         Allocate different dates to various people, by adding the number of people shuduled for your activity per day ("date") in the first text box. Also 
+                         type the dates in the second text box. Type as much dates as you like, please dont forget to seperate each date with a comma.<br/>
+                         <br/> Here is a simple 
+                         illustration to guide you: "I will attend to 100 ("The number you typed in the first text field") people on each giving date ("The dates, seperated by comma you typed in the second text field") I have entered in the text field."
+                        </i>
+                          
+                        </div>
+                    </div>
+                      
+                    
+                </form>
+
+                <form id = "setTime">
+                         
+                    <div class="dbHeader">Shedule Different Times</div>
+                <div id="ourtime" class = "settings">
+                   
+                   
+                    <button type ="button" class ="question">&#63;</button>
+                   
+                    <div >
+                    <label style="">Time allocated to each person: </label>  
+                
+                    <input type="number" placeholder="10" id="sheduleDatesPerson"  class = "txtBox">
+                    <label><i><small> *In minutes*</small></i></label>
+                    <p style="margin-top: 10px;">
+                    <label style="">Time allocated after every session:</label>  
+                
+                    <input type="number" placeholder="5" id="sheduleDatesSession"  class = "txtBox">
+                    <label><i><small> *An unintentional break may occur after every session*</small></i> </label>
+
+                    <div style="margin-top: 10px">
+                        <label>Time starts at: </label>  
+                     
+                         <input type="number" placeholder="09:00" id="sheduleTimeStart"  class = "txtBox" style = "margin-bottom: 10px;">
+                         <br/>
+                         <label>Time ends at:</label>
+                         <input type="number" placeholder="16:00" id="sheduleTimeEnd"  class = "txtBox">
+                         <label style=""></label><i><small>*Use the 24-hour clock format*</small></i> </label>
+                         </div>
+                   
+                    </p>
+                    </div>
+                    <div></div>
+                    <div></div>
+                   
+                    <div class = "explanation" style="display:none"><i>
+                        <i><small>*Works with the 	&#60;time&#62; tag*</small></i>
+                        <br>
+                        <br>
+                     Allocate different time to various people. For <i>e.g.</i> If you will spend 10 minutes on each applicant and you have to screen 50 applicants for the whole day. 
+                     If the Screening will time starts by 9 am, Instead of inviting all the applicants to crowd your office from 9 am till you are done. You can automatically allocate a specific
+                     time of screening to every applicant.
+
+                    <br><br>
+
+                    Here is a simple illustration. Lets assume the screening time is 9 am, the first person will be screened from 9:10am to 9:20am.
+                    There will also be a five mimutes break after each screening session. You can allocate 9:10 am
+                    to the first person, then allocate 9:25 am to the next person, 9:40am the the next person and so forth.
+
+                    </i>
+                      
+                    </div>
+                </div>
+                  
+                
+            </form>
+
+            <form id = "shDates">
+                         
+                <div class="dbHeader">Shedule Different Locations</div>
+            <div id="ourdates" class = "settings">
+               
+               
+                <button type ="button" class ="question">&#63;</button>
+                <div>
+               
+                </div>
+                <div style="margin-top: 10px">
+                <label style="vertical-align: top">Add locations: </label>  
+            
+                <textarea type="text" placeholder="Location A, Location B, Location C, Location D, Location E  " id="addLocation"  class = "txtBox"></textarea>
+                <label style="vertical-align: top"><i><small>*Seperate each location with a comma*</small></i> </label> 
+                
+                <button type = "button" onclick="assignLocation()">Location</button>
+                </div>
+
+                <div></div>
+                <div></div>
+               
+                <div class = "explanation" style="display:none"><i>
+                <i><small>*Works with the 	&#60;location&#62; tag*</small></i>
+                <br>
+                <br>
+                Assign diffrent locations to various people automatically. This is very handy if you have various locations for the same
+                event. Eg. Assign diffrent interview/exam location to various people. Locations will be assigned randomly.
+                  
+                </div>
+            </div>
+              
+            
+        </form>
+
+                    </div>
+                    <div id="createBtn">
+                        <button type="button" id = "createMsgs"  onclick="processData()">Generate Messages</button>
+                    </div>
+                    <div id="update"></div>
+                   
+
+                    <div id="created"></div>
+                    <div id="appendMsg"></div>
+                
+                	<div class="inner3_left">
+                   
+                    </div>
+                    
+                    <div class="right">
+                    
+                    <div class="clear_0"></div>
+                    </div>
+            
+
+
+
+                   
+                    </div>
+                    
+                    <div class="inner3_right">
+                   
+                    <span id="errS"></span>
+                    
+                    <div class="clear_0"></div>
+                    </div>
+                
+                <div class="clear_0"></div>
+                </div>
+                <div class="clear_0"></div>
+             </div>	
+            </section>
+            
+               
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+<!--  WRAPPER -->
+
+
+  		<!-- SFOOTER -->
+        <footer>
+           	<div id="footer">
+            	<div class="container">
+                
+                	<div class="contactus"> 
+                    	<h5>Contact us</h5>
+                        <span>CleverApp Inc.</span>
+                        <p>7301 Corby St Omaha </p>
+                        <a href="#" class="phone"><img src="images/phone.png" alt="">(43) 436 464 426</a>
+                        <a href="mailto:office@cleverapp.com" class="mail"><img src="images/mail.png" alt="">office@cleverapp.com</a>
+                    </div>
+                    
+                    <div class="findus">
+                    	<h5>Find us at</h5>
+                         <a href="#" class="face"></a>
+                         <a href="#" class="gmail"></a>
+                         <a href="#" class="twit"></a>
+                    </div>
+                    
+                    <div class="compatible">
+                    	<h5>Compatible devices</h5>
+                          <a href="#" class="android"><img src="images/androd.png" alt=""></a>
+                         <a href="#" class="ios"><img src="images/ios_51.png" alt=""></a>
+                         <a href="#" class="window"><img src="images/window.png" alt=""></a>
+                    </div>
+                <div class="clear_0"></div> 
+            	</div>
+               
+                <div id="copyright" style="border-style: dashed;border-left: 0px;border-right: 0px;border-bottom: 0px;">
+                	<div class="container">
+                        <p style="font-size: 17px;"> by Likeaking company</p>
+                        <p><i>reality is a lair</i></p>
+                        <br>
+                    <p>Copyright <span id = year> </span> Msg Celeb. All rights reserved.</p>
+                	<div class="clear_0"></div> 
+                    </div>
+                 </div>   
+                
+            </div>
+         </footer> 
+         <button type = "button" id ="myBtn" onclick="topFunction()" >&#8682;</button>
+         
+        <!-- FOOTER -->
+
+       
+
+
+<!---<script type="text/javascript" src="js/retina-1.1.0.js"></script>--->
+
+<script>
+
+</script>
+</body>
+<script src = "js\customMsgSample.js"></script>
+<script src = "js\toogle.js"></script>
+<script src = "js\custom-tags.js"></script>
+
+<script>
+    $(document).ready(function() {
+	
+        $('#myMessage').summernote(
+		
+		{ placeholder: 'Hello stand alone ui',
+          height: 230,
+		  width:1003,
+		theme: 'monokai'});
+    });
+    
+
+    function js_Load(){
+    document.body.style.visibility='visible'
+    }
+  </script>
+
+</html>
+

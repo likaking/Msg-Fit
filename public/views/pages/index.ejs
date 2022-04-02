@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+    
+<head>
+    
+<meta charset="utf-8">
+<title>Msg Celeb</title>
+
+
+<meta name="Msg Celeb" content="Custom message generator">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<!-- FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images\msgFavicon.png">
+<!-- FAVICON -->
+
+<!-- STYLESHEET -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css\editor.css">
+
+
+<!-- For Summer Note-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body body style="visibility: hidden;" onload="js_Load()">
+    
+<!-- WRAPPER -->
+<div class="wrapper">
+	
+    <!-- CONTAINER -->
+
+            <!-- HEADER -->
+           <header> 
+            <div id="header"> 
+                <div class="container">
+                 	<div class="logo"><a href="index.html"><img src="images/logo.png" alt="">Msg<em> celebxxxxxxxxxxxxxxxxxxxxxxxxxxx</em></a></div>
+                    	 
+                	<nav >
+                    <a class="toggleMenu" href="#" >Menu</a>
+                    <ul class="nav" >
+				
+                        <li><a href="index.html">SEND CUSTOM EMAILS</a></li>
+                        <li><a href="sms.html">SEND CUSTOM SMS</a></li>
+                        <li ><a href="inner3.html">DEMO</a></li>
+                        <li><a href="inner1.html">About us </a></li>
+                
+                    </ul>
+                    </nav>
+                    
+           			<div class="clear_0"></div>
+                </div>             	
+                </div>	
+             </header>   
+            <!-- HEADER -->
+           <br>
+           
+            <section>
+            <div id="inner3">
+                
+            	<div class="container">
+                   
+                    <div id="links" style="font-size: 0px;">
+                        <button type="button" class = "tags" id="name" >Name</button>
+                        <button type="button" class = "tags" id="address">Address</button>
+                        <button type="button" class = "tags" id="dob">Date of birth</button>
+                        <button type="button" class = "tags" id="email">Email</button>
+                        <button type="button" class = "tags" id="phoneNumber">Phone number</button>
+
+
+                        <button type="button" class = "tags" id="company">company</button>
+                        <button type="button" class = "tags" id="department">Department</button>
+                        <button type="button" class = "tags" id="skills">Skills</button>
+                       
+                        <button type="button" class = "tags" id="account">Account</button>
+                        <button type="button" class = "tags" id="password">Password</button>
+                        <button type="button" class = "tags" id="time" >Time</button>
+                       
+                        <button type="button" class = "tags" id="date">Date</button>
+                  
+                  
+                        <button type="button" class = "tags" id="number">Number</button>
+                        <button type="button" class = "tags" id="location">Location</button>
+                        <button type="button" class = "tags" id="nextOfkin">Next of Kin</button>
+                        <button type="button" class = "tags" id="tribe">Tribe</button>
+                        <div>
+                           
+                            
+                        </div>
+                   
+                    </div>
+                    
+                         
+                      
+                        <div id="customTag" class = "settings" >
+                        
+                        <input type = "text" placeholder="children" id="customTagBx" class = "mycustTags"  >    
+                        <button id = "createCTags"  onclick="createTag()">Create Custom Tags</button>  
+                        <button type ="button" class ="question" style = "margin-top :9px" >&#63;</button>            
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        
+                       
+                        <div class = "explanation" style="display:none"><i>
+                        Create your own custom tags not readily avialable in the tag menu above. This will enable you create custom tags similar with the information in your data. For instance you can easily create a car tag ("&#60;Car&#62;") for all the cars 
+                        avialable in your data,etc. 
+
+
+                
+                       
+                        </i>
+                          
+                        </div>
+                    </div>
+                
+                    
+              
+                    <form action="/start-processing"   method="POST"   id = "messageForm">
+                    
+                    <div   ><input type="text" placeholder="Tittle" id = "MessageHeader"  name = "title"></div>
+                
+                    <div id="message">
+                        <textarea id="myMessage" name = "msgArea" style="width: 100%;height:400px"></textarea>
+                        </div>
+                   
+                    <div id="data">
+                        <textarea   placeholder="Use CSV format (Semicolon delimited): Name;email;address;department; etc."  spellcheck="false"  id = "dataDetails" name = "addData"></textarea>
+                    </div>
+                    <button type="button" id = "createMsgs"  onclick="processData()">Preview Messages</button>
+                    <div id="dashBoard">
+
+                       
+                          <!--- DATA SCHEMA --->   
+                            <div class="dbHeader">Add Data Schema</div>
+                        <div id="ourSchema" class = "settings">
+                       
+                           
+                            <button type ="button" class ="question">&#63;</button>
+
+                            <div >
+                            <div class = "dSchema" id = "schemaTags">
+
+                               <p style = "text-align:"> Whats does each word (data seperated by " ; ") in each line of  your data represent? <i>e.g.</i> The first word (data) ("Mrs. kennedy Njokwu") represents name, the second word (data)("earthsgift@gmail.com") represents email and so forth. Add just a line.
+                                 
+                            </p>
+                                <br/>
+                                <br/>
+
+                              
+                                <p id="datalinks" style="font-size: 0px">
+                                    <button type="button" class = "datatags" id="dBname" >Name</button>
+                                    <button type="button" class = "datatags" id="dBaddress">Address</button>
+                                    <button type="button" class = "datatags" id="dBdob">Date of birth</button>
+                                    <button type="button" class = "datatags" id="dBemail">Email</button>
+                                    <button type="button" class = "datatags" id="dBphoneNumber">Phone number</button>
+            
+            
+                                    <button type="button" class = "datatags" id="dBcompany">company</button>
+                                    <button type="button" class = "datatags" id="dBdepartment">Department</button>
+                                    <button type="button" class = "datatags" id="dBskills">Skills</button>
+                                   
+                                    <button type="button" class = "datatags" id="dBaccount">Account</button>
+                                    <button type="button" class = "datatags" id="dBpassword">Password</button>
+                                    <button type="button" class = "datatags" id="dBtime" >Time</button>
+                                   
+                                    <button type="button" class = "datatags" id="dBdate">Date</button>
+                              
+                              
+                                    <button type="button" class = "datatags" id="dBnumber">Number</button>
+                                    <button type="button" class = "datatags" id="dBlocation">Location</button>
+                                    <button type="button" class = "datatags" id="dBnextOfkin">Next of Kin</button>
+                                    <button type="button" class = "datatags" id="dBtribe">Tribe</button>
+                                </p>
+
+
+
+                            </div>
+
+                           <p style="text-align: center;">Click the buttons above to append tags to the data schema area</p>
+                           <br/>
+
+                            <div class = "dSchema">
+                               
+                                <textarea  placeholder=" Here is a good example of a data schema: &#60;name&#62;,&#60;email&#62;,&#60;address&#62;,&#60;account&#62;,&#60;skills&#62;,&#60;tribe&#62;. *Don't break the line*"  id="dataSchBox"  name = "dataSchema" style="width: 100%; height: 50px;" ></textarea>
+                              
+                            </div>
+                            </div>
+
+                            <div></div>
+                           
+                            <div class = "explanation" style="display:none">
+                                <i><small>*Please note all data must follow a uniform pattern*</small></i>
+                                
+                            <br/> <br/>
+                           
+                            A data schema will enable the system know the arrangement format your data. Kindly note that all your data should follow a uniform
+                            format and the number of schema tags should be equall with the number of data on every row. Data schema tags represent all the data you entered in the data field. Add just a line
+                            <br/>
+                            <br/>
+
+                            Each line of the data below has five diffrent information in it. Lets assume this is what each line of your data looks like:
+                            <br/>
+                            <br/>
+                            
+                            Grace Amadi; graceAm@gmail.com; No. 25 Queens Estate London; Airtel Africa; 17/1/1994
+                            <br/>
+                            Wendy Brown; Brown@gmail.com; No. 5 Brown Estate New York; Nike; 17/1/1991
+                            <br/>
+                            Alexander Anderson; Anderson@gmail.com; No. 2 Free Country Berlin; Airtel Africa; 17/1/1995
+                            <br/>
+                            Sarah Kofo; mrsKoffo@gmail.com; No. 80 Greater Accra Accra; Bank of Ghana; 17/1/1985
+                            <br/>
+                            Stephanie Sutherland; Sutherland@gmail.com; No. 33 golden road, Paris; NNPC; 17/1/1981
+                            <br/>
+                            etc.
+                            <br/> <br/>
+                            The data before the first comma in every line is a "name", the data before the second comma is an "email", the data before the third comma is an "address",
+                            the data before the forth comma is "where the induvidual is employed", and the last but not the least is  "date of birth".
+                            <br/> <br/>
+                            Here is what the date schema for the above data should be: &#60;name&#62;,&#60;email&#62;,&#60;address&#62;,&#60;company&#62;,&#60;date of birth&#62;. Just add it once (A line is ok).
+                            
+                            
+                            
+                            
+                            <div class=""></div>
+                            
+                           
+                              
+                            </div>
+                        </div>
+                          
+                        
+                    
+
+
+                          <!--- UNIQUE NUMBER --->   
+                            <div class="dbHeader">Allocate Unique Numbers</div>
+                        <div id="uniqueNo" class = "settings">
+
+                            
+                           
+                            <button type ="button" class ="question">&#63;</button>
+                            <label>Give each person a unique number :  </label>  
+                        
+                            <input type="text" placeholder="Navy" id="genNum" name = "unikAlphabet" class = "txtBox">
+                            <small><i> *Add only the static part*</i></small> 
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            
+                           
+                            <div class = "explanation" style="display:none"><i>
+                            <i><small>*Works with the 	&#60;number&#62; tag*</small></i>
+                            <br><br>
+                             Allocate unique/serial numbers like ABC00001,ABC00002,etc, to each person. All you have to do is type in the alphebetical
+                             part of the unique number, then the system will take care of the numerical part and also assign it to each name accordinly.
+                            </i>
+                              
+                            </div>
+                        </div>
+                          
+                        
+                  
+                         <!---  DATES --->   
+                         
+                        <div class="dbHeader">Shedule Different Dates</div>
+                    <div id="ourdates" class = "settings">
+                       
+                       
+                        <button type ="button" class ="question">&#63;</button>
+                        <div>
+                       <label>Number of people per day: </label>  
+                    
+                        <input type="number" placeholder="100" id="sheduleDates" name = "numOfPplDay" class = "txtBox">
+                        </div>
+                        <div style="margin-top: 10px">
+                        <label style="vertical-align: top">Add the dates: </label>  
+                   
+                        <textarea type="number" placeholder="2/8/2022,2/9/2022,2/10/2022,2/11/2022,2/12/2022 " id="addDates"  class = "txtBox" name = "addManyDates"></textarea>
+                        <label style="vertical-align: top"><i><small>*Seperate each date with a comma*</small></i> </label>  
+           
+                        </div>
+                        <div></div>
+                        <div></div>
+                       
+                        <div class = "explanation" style="display:none"><i>
+                        <i><small>*Works with the 	&#60;date&#62; tag*</small></i>
+                        <br>
+                        <br>
+                         Allocate different dates to various people, by adding the number of people shuduled for your activity per day ("date") in the first text box. Also 
+                         type the dates in the second text box. Type as much dates as you like, please dont forget to seperate each date with a comma.<br/>
+                         <br/> Here is a simple 
+                         illustration to guide you: "I will attend to 100 ("The number you typed in the first text field") people on each giving date ("The dates, seperated by comma you typed in the second text field") I have entered in the text field."
+                        </i>
+                          
+                        </div>
+                    </div>
+                      
+                    
+                
+                   <!--- TIME --->      
+                    <div class="dbHeader">Shedule Different Times</div>
+                <div id="ourtime" class = "settings">
+                   
+                   
+                    <button type ="button" class ="question">&#63;</button>
+                   
+                    <div >
+                        <div><small>Use 8 - 5, 9 - 5, etc. The Official working times only.</small></div>
+
+                        <br>
+                        <br>
+                        <div style="margin-bottom: 10px;">
+                            <label>Time starts at: </label>  
+                         
+                             <input type="number" placeholder="9" id="sheduleTimeStart" name = "startingTime" class = "startEnd" style = "margin-bottom: 10px;">
+                             <i><small>*Use the 12-hour clock format*</small></i> 
+                             <br/>
+                             <label>Time ends at:</label>
+                             <input type="number" placeholder="5" id="sheduleTimeEnd" name = "endingTime" class = "startEnd">
+                             <label style="vertical-align: middle;"></label></label>
+                             </div>
+                    <label style="">Time allocated to each person: </label>  
+                
+                    <input type="number" placeholder="10" id="timePerPerson"  name = "timeAllocated"  class = "txtBox">
+                    <label><i><small> *minutes*</small></i></label>
+                    
+                   
+                    <p style="margin-top: 10px;">
+                  
+                    </p>
+                    </div>
+
+                    <div></div>
+                    <div></div>
+                   
+                    <div class = "explanation" style="display:none"><i>
+                        <i><small>*Works with the 	&#60;time&#62; tag*</small></i>
+                        <br>
+                        <br>
+                     Allocate different time to various people. For <i>e.g.</i> If you will spend 10 minutes on each applicant and you have to screen 50 applicants for the whole day. 
+                     If the Screening will time starts by 9 am, Instead of inviting all the applicants to crowd your office from 9 am till you are done. You can automatically allocate a specific
+                     time of screening to every applicant.
+
+                    <br><br>
+
+                    Here is a simple illustration. Lets assume the screening time is 9 am, the first person will be screened from 9:10am to 9:20am.
+                    There will also be a five mimutes break after each screening session. You can allocate 9:10 am
+                    to the first person, then allocate 9:25 am to the next person, 9:40am the the next person and so forth.
+
+                    </i>
+                      
+                    </div>
+                </div>
+                  
+                
+           
+
+         
+
+                <!--- Location --->
+                         
+                <div class="dbHeader">Shedule Different Locations</div>
+            <div id="ourdates" class = "settings">
+               
+               
+                <button type ="button" class ="question">&#63;</button>
+                <div>
+               
+                </div>
+                <div style="margin-top: 10px">
+                <label style="vertical-align: top">Add locations: </label>  
+            
+                <textarea type="text" placeholder="Location A, Location B, Location C, Location D, Location E  " id="addLocation"  name = "diffLocations"  class = "txtBox"></textarea>
+                <label style="vertical-align: top"><i><small>*Seperate each location with a comma*</small></i> </label> 
+                
+                </div>
+
+                <div></div>
+                <div></div>
+               
+                <div class = "explanation" style="display:none">
+                <i><small>*Works with the 	&#60;location&#62; tag*</small></i>
+                <br>
+                <br>
+                Assign diffrent locations to various people automatically. This is very handy if you have various locations for the same
+                event. Eg. Assign diffrent interview/exam location to various people. Locations will be assigned randomly.
+                  
+                </div>
+            </div>
+              
+            
+      
+
+                    </div>
+                    <div id="createBtn">
+                        <button type="button" id = "createMsgs"  onclick="processData()">Preview Messages</button>
+                    </div>
+                    <div id = "errorMsg"  style=" height: 50px;padding: 5px; text-align:center;margin: 20px;"></div>
+                    <div   style=" height: 50px;padding: 5px; text-align:center;margin: 20px;"></div>
+
+                  <center><i> <div id = "sendingInfo"> Configure your Gmail account to permit login from another site <a  href="https://www.google.com/settings/security/lesssecureapps"  style="color: blue;"><i>here</i></a></div></i> </center>
+                  <center><i> <div id = "sendingInfo"> Configure your yahoo mail account to permit login from another site <a  href="https://www.google.com/settings/security/lesssecureapps"  style="color: blue;"><i>here</i></a></div></i> </center>
+              <!--    <center><div>Send custom messages via any email address </div></center> -->
+                  <br> <br>
+                    <center><div></div></center>
+                    <div id="processMsg">
+                      
+                      
+                       <div class="flex-container">
+                        <div  id = "flex-left">
+                            <div style="margin-bottom: 20px;">Login to your email account</div>
+                            <div> <input type="text" placeholder="Host" class = "credens" id = "whoHost" name = "host"></div>
+                            <div> <input type="text" placeholder="Email service " class = "credens" id = "emailServ" name = "emailHost"></div>
+                            <div><input type="text" placeholder="Port" class = "credens" name = "port" ></div>
+                            <div><input type="text" placeholder="Email" class = "credens" name = "username"></div>
+                            
+                            <div><input type="password" placeholder="Password" class = "credens" name = "password" id = "pw" >
+
+                              
+
+                                <button type="button" id = "btns"><i class = "fa fa-eye-slash"></i></button>
+
+                            
+                            </div>
+                        </div>
+                        <div  id = "flex-right">
+                            <div style="margin-bottom: 20px;" id = "learnHeader">How to login</div>
+                            <br>
+                            <br>
+                            
+                           
+                            
+                            <div  id = "learn" >
+                            Host : mail.yourwebsite.com or smtp.yourwebsite.com
+                            <br>
+                            <br>
+                            Email Service : Your hosting company
+                            <br>
+                            <br>
+                            Port : Your web hosting port
+                            <br>
+                            <br>
+                            Email : Your web mail address
+                            <br>
+                            <br>
+                            Password : Your Password
+                        </div>
+                        </div>
+                      
+                      </div>
+                        <button type="submit" id = "processMsgs"  >Login & Send Messages</button>
+                        
+                    </div>
+
+                    
+                </form>       
+                <div  >
+                    <form action="/abort-process">
+                <button type="submit" id = "abort"   style="display: block;margin:0 auto;width: 200px; height: 50px;font-size: 17px;">Abort Process </button>
+            </form>
+            </div>
+                	<div class="inner3_left">
+                   
+                    </div>
+                    
+                    <div class="right">
+                    
+                    <div class="clear_0"></div>
+                    </div>
+            
+
+
+
+                   
+                    </div>
+                    
+                    <div class="inner3_right">
+                   
+                    <span id="errS"></span>
+                    
+                    <div class="clear_0"></div>
+                    </div>
+                    <div id="update" style="width: 79.7%;margin:auto"></div>
+                   
+                    
+                    <div id="created" style="width: 79.7%;margin:auto;text-align: center;"></div>
+                    <div id="appendMsg"   style="width: 79.7%;margin:auto"></div>
+                    <div style="margin-bottom: 100px;"></div>
+                <div class="clear_0"></div>
+                </div>
+                <div class="clear_0"></div>
+             </div>	
+            </section>
+            
+               
+</div>
+
+
+<!--  WRAPPER -->
+
+
+  		<!-- SFOOTER -->
+        <footer>
+           	<div id="footer">
+            	<div class="container">
+                
+                	<div class="contactus"> 
+                    	<h5>Contact us</h5>
+                        <span>Like A King Company</span>
+                        <p>7301 Corby St Omaha </p>
+                        <a href="#" class="phone"><img src="images/phone.png" alt="">(+234) 7061793142 </a>
+                        <a href="mailto:office@cleverapp.com" class="mail"><img src="images/mail.png" alt="">office@cleverapp.com</a>
+                    </div>
+                    
+                    <div class="findus">
+                    	<h5>Find us at</h5>
+                         <a href="#" class="face"></a>
+                         <a href="#" class="gmail"></a>
+                         <a href="#" class="twit"></a>
+                    </div>
+                    
+                    <div class="compatible">
+                    	<h5>Compatible devices</h5>
+                          <a href="#" class="android"><img src="images/androd.png" alt=""></a>
+                         <a href="#" class="ios"><img src="images/ios_51.png" alt=""></a>
+                         <a href="#" class="window"><img src="images/window.png" alt=""></a>
+                    </div>
+                <div class="clear_0"></div> 
+            	</div>
+               
+                <div id="copyright" style="border-style: dashed;border-left: 0px;border-right: 0px;border-bottom: 0px;">
+                	<div class="container">
+                        <p style="font-size: 17px;"> by Like A King Company</p>
+                        <p><i>reality is a lair</i></p>
+                        <br>
+                    <p>Copyright <span id = year> </span> Msg Celeb. All rights reserved.</p>
+                	<div class="clear_0"></div> 
+                    </div>
+                 </div>   
+                
+            </div>
+         </footer> 
+         <button type = "button" id ="myBtn" onclick="topFunction()" >&#8682;</button>
+         
+        <!-- FOOTER -->
+
+       
+
+
+<!---<script type="text/javascript" src="js/retina-1.1.0.js"></script>--->
+
+
+
+
+
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src = "js\customMsg.js"></script>
+<script src = "js\toogle.js"></script>
+<script src = "js\custom-tags.js"></script>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript" src="js/retina-1.1.0.js"></script>
+
+
+<script>
+     
+     $('#myMessage').summernote({
+        
+        placeholder: 'Add the right tags to your message from any of the tag buttons above. Insert your HTML templates into the code view',
+        tabsize: 2,
+        height: 400,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview']]
+        ],
+        codeviewFilter: false,
+  codeviewIframeFilter: true
+      });
+
+
+    function js_Load(){
+    document.body.style.visibility='visible'
+    }
+
+    function tooglePW() {
+  var pwField = document.getElementById("pw");
+  if (pwField.type === "password") {
+    pwField.type = "text";
+    document.getElementById("btns").innerHTML = '<i class = "fa fa-eye"></i>'
+   
+  } else {
+    pwField.type = "password";
+    document.getElementById("btns").innerHTML = '<i class = "fa fa-eye-slash"></i>'
+  }
+}
+
+
+document.getElementById("btns").addEventListener("click", tooglePW )
+
+
+    </script>
+</html>
+

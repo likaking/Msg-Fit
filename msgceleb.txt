@@ -1,0 +1,325 @@
+const express = require("express");
+var favicon = require('serve-favicon');
+const multer = require("multer")
+const fs = require('fs');
+const app = express();
+const PORT = 3030;
+const dotenv = require("dotenv");
+var path = require('path');
+var nodemailer = require('nodemailer');
+const { promisify } = require('util');
+const readFile = promisify(fs.readFile);
+
+app.use(favicon(path.join(__dirname, './public', '/images/msgFavicon.png')))
+app.use(express.static("public"));
+app.use(express.json({limit: "50mb"}));
+app.use(express.urlencoded({limit: '50mb',extended: true, parameterLimit:50000}));
+
+app.get("/", (req,res) => {
+
+    res.sendFile("/index.html")
+
+})
+// Variables for generating dates
+    let noOfpeopleDate;
+    let allDate ;
+    let yourDate ;
+    let dateArray = [];
+    let keepDates = []
+    let allDdates = " ";
+    let fixdates = 10;
+    let createDts = " ";
+
+    //Generate dates
+function processDate(){
+    dateArray.push(allDate);
+    let splitAllDate  = dateArray.toString().split(",");
+    let dlength = [...splitAllDate]
+    let d;
+   for (d = 0; d < splitAllDate.length; d++){
+   allDdates = dlength.shift()
+   for(let t = 0; t <noOfpeopleDate; t++){
+    createDts = allDdates;
+    keepDates.push(createDts)
+   }
+   }
+   }
+
+   //Check schema tags and data
+   let splitSchemax;
+let splitDaData;
+let checkData;
+let splitAllDataz;
+let myDataArray = [];
+let splitData;
+
+
+//End of checking data and schema tags.
+let dataArray = [];
+let dataShemaArray = [];
+let urData ;
+let dataSHtags ;
+let countMsg = 0;
+let pageNo = 0;
+let uniqueNumber = 0000;
+let templateNum = 0;
+   
+
+app.post("/start-processing", async(req,res) => {
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'kunasagbe@gmail.com',
+      pass: '40d765e4D'
+    }
+  });
+
+  splitSchemax = req.body.dataSchema.trim().toString().split(",");
+  splitDaData = req.body.addData.trim().toString().split("\n");
+  myDataArray.push(...splitDaData);
+  checkData = myDataArray.shift();
+  splitAllDataz = checkData.split(";")
+
+
+if(splitSchemax.length === splitAllDataz.length){
+  templateNum++
+    // Get title
+    let msgTitle = req.body.title
+    let emailHost = req.body.emailHost.toLowerCase();
+    let password = req.body.password;
+    let from = req.body.fromwho;
+
+    //Get the alphabet part of the unique number
+
+    let alphabetUnikNum = req.body.unikAlphabet;
+
+    noOfpeopleDate = Number(req.body.numOfPplDay);
+    allDate = req.body.addManyDates;
+    // For time
+    let beginAt = Number(req.body.startingTime);
+    let endingTimeAt = Number(req.body.endingTime);
+    let timeAlloc = Number(req.body.timeAllocated);
+
+    //For locations
+    let locationBox = req.body.diffLocations;
+
+    processDate()
+
+     
+  //For generating time
+
+let startingTime = beginAt - 1;
+let endingTime = endingTimeAt;
+let addTime = timeAlloc;
+let startingTimeCont = beginAt;
+let setDtime = 60 - addTime;
+let sec = setDtime;
+let updateSec = setDtime;
+
+  //Split location text box, then append them to an array
+  allLocations = locationBox.toString().trim().replace(/(,(?!\w+))/g, " ").split(",");
+
+ //Get the message from the Msg editor
+let msgHTML = req.body.msgArea;
+
+let fileName = msgTitle.trim().split(" ").join("-") + templateNum + ".html";
+
+//Write and save the message in the text editor
+fs.writeFile(fileName , msgHTML, function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+
+})
+
+
+
+
+//Push the data and message into their respective arrays
+splitData = req.body.addData.trim().split("\n");
+dataArray.push(...splitData);
+//End of data pushing data into data array
+
+/// Convert < & > in the schema tags to HTML tags
+const tag2HTML = {
+    "<": "&lt;",
+    ">": "&gt;",
+  };
+// Push the data schema into the dataShemaArray
+let splitDataSHtags = req.body.dataSchema.trim().replace(/<|>/g,(match) => tag2HTML[match]).split(",");
+dataShemaArray.push(...splitDataSHtags);
+
+
+//Clone the data array
+let dataCloned = [...dataArray];
+let schemaTagCloned =  [...dataShemaArray]
+let splitDisData;
+let cutData;
+
+//Find the index of Name, email, phone number in the shema tag array
+let getNameIndex = dataShemaArray.indexOf("&lt;name&gt;");
+let getEmailIndex = dataShemaArray.indexOf("&lt;email&gt;");
+let getPnoIndex = dataShemaArray.indexOf("&lt;phone number&gt;");
+let myNameIs;
+let myEmailIs;
+let myPhonerIs;
+
+
+//End of Find the index of Name, email, phone number in the shema tag array
+
+//Define some message replace variables
+let msg1;let msg2;let msg3;let msg4;let msg5;let msg6;let msg7;let msg8;let msg9;let msg10;let msg11;let msg12;let msg13;let msg14;
+let msg15;let msg16;let msg17;let msg18;let msg19;let msg20;
+
+let giveNumber;
+let giveDate;
+let giveTime;
+let giveLocation;
+let getUrNum;
+let cutDLocation;
+let numberOfMailsSent = 0;
+
+ //Process all information; build and send mails
+
+for(let i = 0; i < dataCloned.length; i++){
+  numberOfMailsSent++
+  uniqueNumber++;
+ 
+  pageNo++;
+  getUrNum = alphabetUnikNum + '' + uniqueNumber.toString().padStart(5, '0');
+  
+  //Allocate date
+  let urDate = keepDates.shift();
+  //Allocate Location
+  cutDLocation = allLocations.shift()
+  allLocations.push(cutDLocation)
+
+ //Generate time
+ sec += addTime;
+ updateSec += addTime;
+ 
+ if(sec > 59){
+ sec = updateSec - 60 ; 
+ updateSec = sec;
+ startingTime += 1;
+ }
+ 
+ if(startingTime === 13){
+ startingTime = 1;
+ }
+ 
+ if(startingTime === endingTime){
+ startingTime = startingTimeCont;
+ sec = 00;
+ }
+ let timeEndsIn = startingTime;
+ let timeEndsSec = Number(sec + addTime);
+ if(timeEndsSec > 59){
+ timeEndsSec = timeEndsSec - 60 ; 
+ //updateSec = sec;
+  timeEndsIn += 1;
+ }
+ if(timeEndsIn === 13){
+ timeEndsIn = 1;
+ }
+ //console.log(timeEndsIn + ":" + timeEndsSec.toString().padStart(2, '0'))
+ let fixTime;
+ let yourTimeEnds;
+ if(startingTime >= 7 && startingTime !== 12 ){
+ fixTime = startingTime + ":"  + sec.toString().padStart(2, '0') + " AM";
+ }
+ else{
+ fixTime  = startingTime  + ":"  + sec.toString().padStart(2, '0') + " PM";
+ }
+ if(timeEndsIn >= 7 && timeEndsIn !== 12  ){
+ yourTimeEnds = timeEndsIn + ":" + timeEndsSec.toString().padStart(2, '0') + " AM";
+ }
+ else{
+ yourTimeEnds = timeEndsIn + ":" + timeEndsSec.toString().padStart(2, '0') + " PM";
+ }
+ let allocateTime = fixTime + " to " + yourTimeEnds;
+
+// console.log(allocateTime)
+ cutData = dataArray.shift();
+ splitDisData = cutData.toString().split(";");
+ //Find the location of name,email and phone number in the splitDisData array
+ myNameIs = splitDisData[getNameIndex];
+ myEmailIs = splitDisData[getEmailIndex];
+ myPhoneNoIs = splitDisData[getPnoIndex];
+
+ fs.readFile(fileName, 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+
+  
+  giveNumber = data.replace(/&lt;number&gt;/gi,getUrNum);
+  
+  fs.writeFile(fileName, giveNumber, 'utf8', function (err) {
+    if (err) return console.log(err);
+   // console.log('Saved1');
+ 
+ });
+    
+  giveDate =  giveNumber.replace(/&lt;date&gt;/gi,urDate);
+ fs.writeFile(fileName, giveDate, 'utf8', function (err) {
+   if (err) return console.log(err);
+  // console.log('Saved2');
+ 
+});
+ 
+
+giveLocation = giveDate.replace(/&lt;location&gt;/gi,cutDLocation);
+fs.writeFile(fileName, giveLocation, 'utf8', function (err) {
+  if (err) return console.log(err);
+ // console.log('Saved3');
+});
+
+
+giveTime =  giveLocation.replace(/&lt;time&gt;/gi,allocateTime);
+fs.writeFile(fileName, giveTime, 'utf8', function (err) {
+  if (err) return console.log(err);
+  //console.log(fileName);
+});
+})
+
+var mailOptions = {
+  from: 'kunasagbe@gmail.com',
+  to: 'kunaplanet@gmail.com',
+  subject: 'Sending Email using Node.js',
+  //text: 'That was easy!',
+  html: await readFile(fileName, 'utf8')
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+
+
+});
+
+}
+ 
+
+} 
+else{
+ 
+  console.log("Error: The number of schema tags did not rhyme with the number of data on every row")
+ 
+  
+  return false
+}
+})
+
+
+
+
+app.listen(PORT, (req,res) =>{
+
+        console.log(`This website is running on port ${PORT}. Message Celeb - by LikeAKing Company`)
+ 
+
+})
+

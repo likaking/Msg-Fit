@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+.containerEdt {
+    background-color: whitesmoke;
+  }
+
+  #quillEditor {
+    height: 350px;
+    overflow: auto;
+    background-color: whitesmoke;
+    resize: both;
+    
+  }
+  strong { font-weight: bold !important; }
+
+  button.ql-showHtml:after {
+  content: "[code]";
+  }
+
+  
