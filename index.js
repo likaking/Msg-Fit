@@ -1,7 +1,7 @@
 const express = require("express");
 var favicon = require('serve-favicon');
 //const multer = require("multer");
-const CONCURRENCY = process.env.WEB_CONCURRENCY || 1;
+
 const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT ||3030 
