@@ -22,5 +22,6 @@
   },
   "engines": {
   "node": "12.22.2"
-}
+},
+ "private": true,
 }
