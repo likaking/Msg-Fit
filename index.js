@@ -3,20 +3,18 @@ const express = require("express");
 //const multer = require("multer")
 const fs = require('fs');
 const app = express();
-const PORT = process.env.PORT ||3030 
+//const PORT = process.env.PORT ||3030; 
 const dotenv = require("dotenv");
 var path = require('path');
 var nodemailer = require('nodemailer');
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
 var process = require('process');
-const router = express.Router();
+//const router = express.Router();
 const ejs = require('ejs');
 const cors = require('cors');
 const { EventEmitter } = require("events");
-
 const firstEmitter = new EventEmitter();
-
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
@@ -37,7 +35,7 @@ app.use(session({
 app.use(flash());
 
 
-app.use("/", router);
+//app.use("/", router);
 app.use(cors())
 
 // Variables for generating dates
@@ -444,7 +442,7 @@ router.get("/demo", (req,res) => {
   })
 
 console.log(numberOfMailsSent)
-app.listen(PORT,(req,res) =>{
+app.listen(process.env.PORT ||3030,(req,res) =>{
         console.log(`This website is running on port ${PORT}. Message Celeb - by LikeAKing Company`)
  
 })
