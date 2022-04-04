@@ -1,5 +1,5 @@
 const express = require("express");
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 //const multer = require("multer")
 const fs = require('fs');
 const app = express();
@@ -21,7 +21,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 
-app.use(favicon(path.join(__dirname, './public', '/images/msgFavicon.png')))
+//app.use(favicon(path.join(__dirname, './public', '/images/msgFavicon.png')))
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({limit: '50mb',extended: true, parameterLimit:50000}));
