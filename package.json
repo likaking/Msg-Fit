@@ -1,5 +1,5 @@
 {
-  "name": "msg-fit",
+  "name": "msgfit",
   "version": "1.0.0",
   "description": "An app for creating an sending custom messages to people.",
   "main": "index.js",
@@ -17,11 +17,11 @@
     "nodemailer": "^6.7.2"
   },
   "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "dotenv": "^16.0.0",
     "nodemon": "^2.0.15"
   },
   "engines": {
-  "node": "12.22.2"
-}
-
+    "node": "12.22.2"
+  }
 }

@@ -1,16 +1,15 @@
 const express = require("express");
-//var favicon = require('serve-favicon');
-//const multer = require("multer")
+const multer = require("multer")
 const fs = require('fs');
 const app = express();
-//const PORT = process.env.PORT ||3030; 
+const PORT = 3030; 
 const dotenv = require("dotenv");
 var path = require('path');
 var nodemailer = require('nodemailer');
 const { promisify } = require('util');
 const readFile = promisify(fs.readFile);
 var process = require('process');
-//const router = express.Router();
+const router = express.Router();
 const ejs = require('ejs');
 const cors = require('cors');
 const { EventEmitter } = require("events");
@@ -18,8 +17,6 @@ const firstEmitter = new EventEmitter();
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
-
-//app.use(favicon(path.join(__dirname, './public', '/images/msgFavicon.png')))
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({limit: '50mb',extended: true, parameterLimit:50000}));
@@ -35,7 +32,7 @@ app.use(session({
 app.use(flash());
 
 
-//app.use("/", router);
+app.use("/", router);
 app.use(cors())
 
 // Variables for generating dates
@@ -441,8 +438,8 @@ router.get("/demo", (req,res) => {
   res.render('pages/demo')
   })
 
-console.log(numberOfMailsSent)
-app.listen(process.env.PORT ||3030,(req,res) =>{
+
+app.listen(process.env.PORT || 3030,(req,res) =>{
         console.log(`This website is running on port ${PORT}. Message Celeb - by LikeAKing Company`)
  
 })
