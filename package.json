@@ -8,7 +8,6 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "postinstall": "npm run build",
     "client": "npm start --prefix client",
-    "build": "webpack --config webpack.config.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Like A king company",
