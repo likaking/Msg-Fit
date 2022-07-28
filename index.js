@@ -1,9 +1,9 @@
 const express = require("express");
-const multer = require("multer")
+//const multer = require("multer")
 const fs = require('fs');
 const app = express();
-const PORT = 3030; 
-const dotenv = require("dotenv");
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
+const port = 3000;
 var path = require('path');
 var nodemailer = require('nodemailer');
 const { promisify } = require('util');
@@ -14,14 +14,18 @@ const ejs = require('ejs');
 const cors = require('cors');
 const { EventEmitter } = require("events");
 const firstEmitter = new EventEmitter();
+/*
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
+*/
 app.use(express.static("public"));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
+
 app.use(express.urlencoded({limit: '50mb',extended: true, parameterLimit:50000}));
 app.use(express.json({limit: "50mb"}));
-
+/*
 app.use(cookieParser('NotSoSecret'));
 app.use(session({
   secret : 'something',
@@ -31,6 +35,27 @@ app.use(session({
 }));
 app.use(flash());
 
+*/
+
+
+  router.get("/", (req,res) => {
+    res.render('pages/index',{
+    })
+  });
+
+  
+  router.get("/sms", (req,res) => {
+  res.render('pages/sms')
+  });
+  router.get("/demo", (req,res) => {
+    res.render('pages/demo')
+    })
+
+    app.get('/about', (req, res) => {
+      res.send('about')
+    })
+    
+   
 
 app.use("/", router);
 app.use(cors())
@@ -89,8 +114,6 @@ let loginfo;
 
 
 app.post("/start-processing", async(req,res) => {
- 
-
   splitSchemax = req.body.dataSchema.trim().toString().split(",");
   splitDaData = req.body.addData.trim().toString().split("\n");
   myDataArray.push(...splitDaData);
@@ -427,20 +450,11 @@ if(dataArray.length === 0){
 }
 })
 
-router.get("/", (req,res) => {
-  res.render('pages/index',{
-  })
-});
-router.get("/sms", (req,res) => {
-res.render('pages/sms')
-});
-router.get("/demo", (req,res) => {
-  res.render('pages/demo')
-  })
 
 
-app.listen(process.env.PORT || 3030,(req,res) =>{
-        console.log(`This website is running on port ${PORT}. Message Celeb - by LikeAKing Company`)
+
+app.listen(process.env.PORT || port,(req,res) =>{
+        console.log(`This website is running on http://localhost:${port}. Message Fit - by LikeAKing Company`)
  
 })
 

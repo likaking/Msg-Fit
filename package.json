@@ -1,27 +1,34 @@
 {
   "name": "msgfit",
   "version": "1.0.0",
-  "description": "An app for creating an sending custom messages to people.",
+  "description": "An app for creating and sending custom messages to people.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "postinstall": "npm run build",
+    "client": "npm start --prefix client",
+    "build": "webpack --config webpack.config.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Like A king company",
   "license": "ISC",
   "dependencies": {
+    "connect": "^3.7.0",
     "cors": "^2.8.5",
-    "ejs": "^3.1.6",
-    "express": "^4.17.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "fs": "^0.0.1-security",
-    "nodemailer": "^6.7.2"
+    "nodemailer": "^6.7.2",
+    "st": "^3.0.0"
   },
   "devDependencies": {
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
-    "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15"
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
   },
   "engines": {
-    "node": "12.22.2"
+    "node": ">=12.22.2",
+    "npm": ">=8.3.0"
   }
 }

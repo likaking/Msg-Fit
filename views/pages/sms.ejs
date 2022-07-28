@@ -28,6 +28,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 </head>
 
 <body body style="visibility: hidden;" onload="js_Load()">
@@ -45,10 +46,10 @@
                     	 
                 	<nav >
                     <a class="toggleMenu" href="#" >Menu</a>
-                    <ul class="nav" >
+                    <ul class="navx" >
 				
-                        <li><a href="/" >SEND CUSTOM EMAILS</a></li>
-                        <li id = "sendSMS" ><a href="/sms" style="color:">SEND CUSTOM SMS</a></li>
+                        <li><a href="/" class = "navBtns">SEND CUSTOM EMAILS</a></li>
+                        <li id = "sendSMS sendCsms" class = "navBtns"><a href="/sms" >SEND CUSTOM SMS></a></li>
                     </ul>
                     </nav>
            			<div class="clear_0"></div>
@@ -86,7 +87,7 @@
                     
                         <div id="customTag" class = "settings1" >
                         
-                        <input type = "text" placeholder="children" id="customTagBx" class = "mycustTags"  >    
+                        <input type = "text" placeholder="eg.children" id="customTagBx" class = "mycustTags"  >    
                         <button id = "createCTags"  onclick="createTag()">Create Custom Tags</button>  
                         <button type ="button" class ="questionX" style = "margin-top :0px" >&#63;</button>            
                         <div></div>
@@ -97,7 +98,7 @@
                        
                         <div class = "explanation" style="display:none"><i>
                         Create your own custom tags not readily avialable in the tag menu. This will enable you create custom tags similar with the information in your data. For instance you can easily create a car tag ("&#60;Car&#62;") for all the cars 
-                        avialable in your data,etc
+                        avialable in your data.
                         </i>
                           
                         </div>
@@ -124,9 +125,8 @@
 
                             <div >
                             <div class = "dSchema" id = "schemaTags">
-
                                <p style = "text-align:justify" id = "schemaEXPL"> Whats does each word (data seperated by " ; ") in each line of  your data represent? <i>e.g.</i> The first word (data) ("Sam Parr") represents name, the second word (data)("Sam@gmail.com") represents email and so forth. Add just a line.
-                                 
+
                             </p>
                                 <br/>
                            
