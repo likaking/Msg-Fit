@@ -8,7 +8,9 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "postinstall": "npm run build",
     "client": "npm start --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "build": "webpack",
+    "my-custom-start": "PROD=true node index.js" ,
+    "heroku-postbuild": "ng build --prod"
   },
   "author": "Like A king company",
   "license": "ISC",
@@ -27,8 +29,8 @@
     "nodemon": "^2.0.19"
   },
   "engines": {
-    "node": ">=12.22.2",
-    "npm": ">=8.3.0"
+    "node": "12.22.2",
+    "npm": "8.3.0"
   },
   "keywords": []
 }
