@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "postinstall": "npm run build",
-    "client": "npm start --prefix client",
-    "build": "webpack",
-    "my-custom-start": "PROD=true node index.js" ,
+    "test": "echo \"Error: no test specified\" && exit 1"
 
   },
   "author": "Like A king company",
