@@ -10,7 +10,7 @@
     "client": "npm start --prefix client",
     "build": "webpack",
     "my-custom-start": "PROD=true node index.js" ,
-    "heroku-postbuild": "ng build --prod"
+
   },
   "author": "Like A king company",
   "license": "ISC",
